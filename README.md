@@ -1,4 +1,4 @@
-# UFCATeX
+# ufcaTeX
 
 This project provides a LaTeX document class suitable for writing academic
 dissertations and thesis according to the formatting rules established at Universidade
