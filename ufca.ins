@@ -1,9 +1,9 @@
 %
-% This is file `coppe.ins'.
+% This is file `ufca.ins'.
 %
-% It uses the docstrip utility to generate the `coppe'
+% It uses the docstrip utility to generate the `ufca'
 % document class and a sample manuscript `example.tex'
-% from file `coppe.dtx'.
+% from file `ufca.dtx'.
 %
 % Copyright (C) 2011 CoppeTeX Project and any individual authors listed
 % elsewhere in this file.
@@ -35,7 +35,7 @@
 
 \declarepreamble\classpreamble
 
-This is the `coppe' document class used for composition of LaTeX
+This is the `ufca' document class used for composition of LaTeX
 monographs (master and PhD thesis, and PhD qualifying exams)
 satisfying the requirements of the Coordination of Research and
 Graduate Courses in Engineering at the Federal University of
@@ -64,7 +64,7 @@ Author(s): Vicente Helano,
 \declarepreamble\glossarypreamble
 
 This is the makeindex style for creating ordered glossaries
-when using the `coppe' document class.
+when using the `ufca' document class.
 
 Copyright (C) 2008 Vicente Helano and George Ainsworth Jr.
 
@@ -88,22 +88,22 @@ Author(s): Vicente Helano,
 
 \declarepreamble\examplepreamble
 
-This is a sample monograph which illustrates the use of `coppe' document
-class and `coppe-unsrt' BibTeX style.
+This is a sample monograph which illustrates the use of `ufca' document
+class and `ufca-unsrt' BibTeX style.
 
 \endpreamble
 
 \postamble
-% end of `coppe' customized files
+% end of `ufca' customized files
 \endpostamble
 
-\usedir{tex/latex/coppe}
+\usedir{tex/latex/ufca}
 \generate{%
   \usepreamble\glossarypreamble
-  \file{coppe.ist}{\from{coppe.dtx}{glossary}}%
+  \file{ufca.ist}{\from{ufca.dtx}{glossary}}%
   \usepreamble\examplepreamble
-  \file{example.tex}{\from{coppe.dtx}{example}}%
+  \file{example.tex}{\from{ufca.dtx}{example}}%
   \usepreamble\classpreamble
-  \file{coppe.cls}{\from{coppe.dtx}{class}}%
+  \file{ufca.cls}{\from{ufca.dtx}{class}}%
 }
 \endbatchfile

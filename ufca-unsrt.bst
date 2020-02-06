@@ -1,5 +1,5 @@
 %
-% This is file `coppe-unsrt.bst',
+% This is file `ufca-unsrt.bst',
 % A modification of `unsrtnat.bst' for use with natbib package 
 %
 % Numbered BibTeX style for using with CoppeTeX package.

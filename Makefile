@@ -26,8 +26,8 @@
 #
 
 PROGRAM_NAME=CoppeTeX Makefile
-PACKAGE_NAME=coppe
-DOC_SOURCE=coppe.dtx
+PACKAGE_NAME=ufca
+DOC_SOURCE=ufca.dtx
 VERSION="2.2"
 AUTHORS=Vicente H. F. Batista and George O. Ainsworth Jr.
 COPYRIGHT_YEAR=2011
@@ -40,19 +40,19 @@ _printf=printf
 _rm=rm
 _tar=tar
 
-CLSDIR=$(DESTDIR)/tex/latex/coppe
-BSTDIR=$(DESTDIR)/bibtex/bst/coppe
-ISTDIR=$(DESTDIR)/makeindex/coppe
-DOCDIR=$(DESTDIR)/doc/latex/coppe
+CLSDIR=$(DESTDIR)/tex/latex/ufca
+BSTDIR=$(DESTDIR)/bibtex/bst/ufca
+ISTDIR=$(DESTDIR)/makeindex/ufca
+DOCDIR=$(DESTDIR)/doc/latex/ufca
 
 TEXFLAGS  = 
 BIBTEXFLAGS = -terse
 IDXFLAGS = -q -s gind.ist
 GLOFLAGS = -q -s gglo.ist
-LSTFLAGS = -q -s coppe.ist
+LSTFLAGS = -q -s ufca.ist
 
-DIST_CONTENT=coppe.cls coppe.ist coppe.pdf coppe-plain.bst coppe-unsrt.bst COPYING example.bib example.tex coppe-logo.eps coppe-logo.pdf README
-DISTSRC_CONTENT=coppe.bib coppe.dtx coppe.ins coppe-plain.bst coppe-unsrt.bst COPYING example.bib Makefile coppe-logo.eps coppe-logo.pdf README
+DIST_CONTENT=ufca.cls ufca.ist ufca.pdf ufca-plain.bst ufca-unsrt.bst COPYING example.bib example.tex ufca-logo.eps ufca-logo.pdf README
+DISTSRC_CONTENT=ufca.bib ufca.dtx ufca.ins ufca-plain.bst ufca-unsrt.bst COPYING example.bib Makefile ufca-logo.eps ufca-logo.pdf README
 
 .SUFFIXES: .tex .dtx
 
@@ -90,7 +90,7 @@ install: doc class example.pdf
 	  rm -rf $(CLSDIR); \
 	fi
 	mkdir -vp $(CLSDIR)
-	cp -vp $(PACKAGE_NAME).cls coppe-logo.eps coppe-logo.pdf $(CLSDIR)/
+	cp -vp $(PACKAGE_NAME).cls ufca-logo.eps ufca-logo.pdf $(CLSDIR)/
 	if [ -d "$(BSTDIR)" ]; then \
 	  rm -rf $(BSTDIR); \
 	fi
@@ -171,4 +171,4 @@ example.tex: $(PACKAGE_NAME).ins
 clean:
 	@$(_rm) -f *.log *.aux *.ist *.idx *.blg *.bbl *.glo *.bz2 \
 		         *.toc *.lof *.lot *.syx *.abx *.lab *.ilg *.los *.ind \
-						 *.gls *.out *~ coppe.pdf coppe.cls example.pdf example.tex
+						 *.gls *.out *~ ufca.pdf ufca.cls example.pdf example.tex
