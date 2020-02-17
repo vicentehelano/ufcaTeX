@@ -1,9 +1,9 @@
 % \iffalse meta-comment
 %
-% This is file `coppe.dtx'.
+% This is file `ufca.dtx'.
 %
-% It uses the doc utility to generate documentations for the 'coppe'
-% document class and the 'coppe-unsrt' BibTeX style.
+% It uses the doc utility to generate documentations for the 'ufca'
+% document class and the 'ufca-unsrt' BibTeX style.
 %
 % Copyright (C) 2020 CoppeTeX Project and any individual authors listed
 % elsewhere in this file.
@@ -38,7 +38,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 
 \EnableCrossrefs \CodelineIndex \RecordChanges
 \begin{document}
-  \DocInput{coppe.dtx}
+  \DocInput{ufca.dtx}
 \end{document}
 %</driver> \fi
 %
@@ -120,16 +120,16 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \DoNotIndex{\hline, \hspace, \label, \ltx@ifpackageloaded, \ref}
 % \DoNotIndex{\spacefactor, \textbackslash, \toks@, \verb}
 %
-% \GetFileInfo{coppe}
+% \GetFileInfo{ufca}
 %
-% \title{The |coppe| document class}
+% \title{The |ufca| document class}
 % \author{Vicente H. F. Batista \and George O. Ainsworth Jr.}
 %
 % \maketitle
 %
 % \begin{abstract}
 %
-% In this work, it is described the |coppe| document class as well as other
+% In this work, it is described the |ufca| document class as well as other
 % files distributed by the \CoppeTeX\ project.  This class is suitable for
 % writing academic dissertations, thesis and qualifying exams according to the
 % formatting rules of the Alberto Luiz Coimbra Institute for Graduate Studies
@@ -150,11 +150,11 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % tries to facilitate and encourage the use of \LaTeX\ within the COPPE/UFRJ
 % scope.
 %
-% The |coppe| document class is the main product of \CoppeTeX.
+% The |ufca| document class is the main product of \CoppeTeX.
 % It was designed to be clear and succinct. It enables the
 % creation of dissertations, qualifying exams and thesis in a simple and
 % automatic way.
-% The main goal of the |coppe| class is to maintain authors strictly focused
+% The main goal of the |ufca| class is to maintain authors strictly focused
 % on text
 % composition without worrying about margins sizes,
 % line spacing, paper size, vertical and horizontal alignment, etc.
@@ -165,7 +165,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % to obtain the DSc degree.
 %
 % In which follows, it is described the user interface
-% of the |coppe| class. Some details about using the style files cited above
+% of the |ufca| class. Some details about using the style files cited above
 % are also given. We use the term \emph{thesis} to generally refer to
 % dissertation, qualifying exam, and thesis itself.
 %
@@ -183,7 +183,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %
 % We maintain a mailing list where users can send questions, comments,
 % and bugs to. More details can be found
-% \href{http://coppetex.sourceforge.net/mailing-list.html}{here}.
+% \href{http://ufcatex.sourceforge.net/mailing-list.html}{here}.
 % 
 % \section{User interface}
 %
@@ -229,7 +229,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % The macros |\title| and |\foreigntitle| are used to enter the titles of your
 % monograph in the current and foreign languages. The default languages are
 % Brazilian Portuguese and English.  The |babel| package is automatically
-% loaded by |coppe.cls|, so you do not need to load it again. The Brazilian
+% loaded by |ufca.cls|, so you do not need to load it again. The Brazilian
 % Portuguese is the main language and the English is only required for the
 % foreign abstract.
 %
@@ -336,7 +336,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % which is part of any \LaTeX\ implementation. MakeIndex needs  two commands 
 % to create a final sorted list: one which generates a list of entries and the 
 % other that indicates the position where the list will be printed out.  
-% To generate the lists of symbols and abbreviations, the |coppe| class provides
+% To generate the lists of symbols and abbreviations, the |ufca| class provides
 % the commands |\makeloabbreviations| and |\makelosymbols|, respectively.
 % They must be called in the document preamble. The commands |\printlosymbols| 
 % and |\printloabbreviations| have to be invoked at the point where you want 
@@ -347,27 +347,27 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % produced, redirecting the output to files with extension |lab| and |los| 
 % respectively:
 % \begin{verbatim} 
-%   makeindex -s coppe.ist -o example.lab example.abx
-%   makeindex -s coppe.ist -o example.los example.syx 
+%   makeindex -s ufca.ist -o example.lab example.abx
+%   makeindex -s ufca.ist -o example.los example.syx 
 % \end{verbatim}
-% Note the |-s| option for specifying the style |coppe.ist|. Now, rerun |latex|
+% Note the |-s| option for specifying the style |ufca.ist|. Now, rerun |latex|
 % twice to get the references solved and you are done.
 %
 % \subsection*{References}
 %
 % It is well known that bibliography databases can be easily maintained with
 % the aid of \BibTeX. Thus, the \CoppeTeX\ project designed two \BibTeX\ styles,
-% |coppe-plain.bst| and |coppe-unsrt.bst|.
-% The |coppe-plain.bst| creates a list of references alphabetically sorted.
+% |ufca-plain.bst| and |ufca-unsrt.bst|.
+% The |ufca-plain.bst| creates a list of references alphabetically sorted.
 % The later is a numbered style,
 % which sorts references by the order of citation.
 % To use them,
-% you have to select either |coppe-plain| or |coppe-unsrt| as the \BibTeX\ style and
+% you have to select either |ufca-plain| or |ufca-unsrt| as the \BibTeX\ style and
 % include your \BibTeX\ references
 % without the |bib| extension, as in the following
 % example:
 % \begin{verbatim}
-%   \bibliographystyle{coppe-unsrt}
+%   \bibliographystyle{ufca-unsrt}
 %   \bibliography{example}
 % \end{verbatim}
 %
@@ -379,13 +379,13 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \section{Class options}
 %
 % There are some options users can specify in order to customize the appearance
-% of the output produced by the |coppe| class. These options can be passed to
-% |coppe| as follows: |\documentclass[option1, option2]{coppe}|.
+% of the output produced by the |ufca| class. These options can be passed to
+% |ufca| as follows: |\documentclass[option1, option2]{ufca}|.
 % In which follows, we give a brief description of all supported options.
 %
 % \begin{description}
 %
-%   \item[\texttt{dsc, msc, dscexam}] The |coppe| class is able to produce
+%   \item[\texttt{dsc, msc, dscexam}] The |ufca| class is able to produce
 %   thesis, dissertations, and qualifying exams, which are enabled by the
 %   |dsc|, |msc|, and |dscexam| options, respectively.
 %
@@ -394,9 +394,9 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %
 %   \item[\texttt{numbers}] The default citation style is the author-year
 %   scheme, which must be followed by the use of its corresponding \BibTeX\
-%   style, namely, the |coppe-plain.bst| file.  For numbered citations, specify
-%   the option |numbers| to the |coppe| class.  In this case, it is
-%   mandatory the use of |coppe-unsrt.bst|, as the bibliography style.
+%   style, namely, the |ufca-plain.bst| file.  For numbered citations, specify
+%   the option |numbers| to the |ufca| class.  In this case, it is
+%   mandatory the use of |ufca-unsrt.bst|, as the bibliography style.
 %
 % \end{description}
 %
@@ -424,7 +424,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % When working with PDF's, there is the possibility to add extra information to
 % the file as the author's name, document title, subject, keywords, etc.  This
 % is easily done with the |hyperref| package.  It is also useful to enable
-% hyperlinks.  Fortunately, the |coppe| class will do this automatically if
+% hyperlinks.  Fortunately, the |ufca| class will do this automatically if
 % |hyperref| is loaded.
 %
 % \paragraph{Printing.} To get your work correctly printed,
@@ -437,7 +437,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \label{COPPE:SAMPLE}
 %    \begin{macrocode}
 %<*example>
-\documentclass[dsc,numbers]{coppe}
+\documentclass[dsc,numbers]{ufca}
 \usepackage{amsmath,amssymb}
 \usepackage{hyperref}
 
@@ -544,7 +544,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \chapter{Conclus\~oes}
 
   \backmatter
-  \bibliographystyle{coppe-unsrt}
+  \bibliographystyle{ufca-unsrt}
   \bibliography{example}
 
   \appendix
@@ -557,15 +557,15 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %
 % \section{Implementation}
 %
-% \subsection{The `\texttt{coppe.cls}' file}
+% \subsection{The `\texttt{ufca.cls}' file}
 %
 %    \begin{macrocode}
 %<*class>
-\def\filename{coppe.dtx}
+\def\filename{ufca.dtx}
 \def\fileversion{v3.0}
 \def\filedate{2020/03/02}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{coppe}[\filedate\ \fileversion\ COPPE Dissertations and Thesis]
+\ProvidesClass{ufca}[\filedate\ \fileversion\ COPPE Dissertations and Thesis]
 \LoadClass[12pt,a4paper,oneside]{book}
 \RequirePackage[sort&compress]{natbib}
 \RequirePackage{hyphenat}
@@ -812,7 +812,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \begin{macro}{\mainmatter}
 %    \begin{macrocode}
 \renewcommand\mainmatter{%
-  \coppe@mainBegin
+  \ufca@mainBegin
   \cleardoublepage
   \@mainmattertrue
   \pagestyle{plain}
@@ -838,13 +838,13 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %    \begin{macrocode}
 \renewcommand\maketitle{%
   \pagenumbering{alph}
-  \ltx@ifpackageloaded{hyperref}{\coppe@hypersetup}{}%
+  \ltx@ifpackageloaded{hyperref}{\ufca@hypersetup}{}%
   \begin{titlepage}
   \begin{flushleft}
   \vspace*{1.5mm}
   \setlength\baselineskip{0pt}
   \setlength\parskip{1mm}
-  \makebox[20mm][c]{\hspace{4.8cm}\includegraphics{coppe-logo}}
+  \makebox[20mm][c]{\hspace{4.8cm}\includegraphics{ufca-logo}}
   \end{flushleft}
   \vspace{1.05cm}
   \begin{center}
@@ -960,7 +960,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %    \end{macrocode}
 % \changes{v3.0}{2020/02/03}{New approval page layout.}
 %    \begin{macrocode}
-\newcommand\coppe@hypersetup{%
+\newcommand\ufca@hypersetup{%
 \begingroup
   % changes to \toks@ and \count@ are kept local;
   % it's not necessary for them, but it is usually the case
@@ -1189,7 +1189,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \begin{macro}{\listoffigures}
 %    \begin{macrocode}
 \renewcommand\listoffigures{%
-    \coppe@hasLof
+    \ufca@hasLof
     \if@twocolumn
       \@restonecoltrue\onecolumn
     \else
@@ -1304,29 +1304,29 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % Some macros used to generate cataloging information.
 \AtBeginDocument{%
   \ltx@ifpackageloaded{hyperref}{
-    \def\coppe@bibEnd{%
+    \def\ufca@bibEnd{%
       \immediate\write\@auxout{%
         \string\newlabel{bib:end}{{}{\arabic{page}}{}{page.\arabic{page}}{}}}}%
-    \def\coppe@bibBegin{%
+    \def\ufca@bibBegin{%
       \immediate\write\@auxout{%
         \string\newlabel{bib:begin}{{}{\arabic{page}}{}{page.\arabic{page}}{}}}}%
-    \def\coppe@mainBegin{%
+    \def\ufca@mainBegin{%
       \immediate\write\@auxout{%
         \string\newlabel{front:pageno}{{}{\Roman{page}}{}{page.\roman{page}}{}}}}%
-    \def\coppe@hasLof{%
+    \def\ufca@hasLof{%
       \immediate\write\@auxout{%
         \string\newlabel{cat:lofflag}{{}{:~il.;}{}{page.\roman{page}}{}}}}%
   }{%
-    \def\coppe@bibEnd{%
+    \def\ufca@bibEnd{%
       \immediate\write\@auxout{%
       \string\newlabel{bib:end}{{}{\arabic{page}}{}}}}%
-    \def\coppe@bibBegin{%
+    \def\ufca@bibBegin{%
       \immediate\write\@auxout{%
       \string\newlabel{bib:begin}{{}{\arabic{page}}{}}}}%
-    \def\coppe@mainBegin{%
+    \def\ufca@mainBegin{%
       \immediate\write\@auxout{%
         \string\newlabel{front:pageno}{{}{\Roman{page}}{}}}}%
-    \def\coppe@hasLof{%
+    \def\ufca@hasLof{%
       \immediate\write\@auxout{%
         \string\newlabel{cat:lofflag}{{}{:~il.;}{}}}}%
   }%
@@ -1337,7 +1337,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
      {\onehalfspacing%
       \chapter*{\bibname}%
       \addcontentsline{toc}{chapter}{\bibname}%
-      \coppe@bibBegin
+      \ufca@bibBegin
       \list{\@biblabel{\@arabic\c@enumiv}}%
            {\setlength{\labelwidth}{0ex}%
             \setlength{\leftmargin}{9.0ex}%
@@ -1354,7 +1354,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
       \sfcode`\.\@m}%
      {\def\@noitemerr%
        {\@latex@warning{Empty `thebibliography' environment}}%
-       \coppe@bibEnd
+       \ufca@bibEnd
       \endlist}
 %    \end{macrocode}
 %
@@ -1489,7 +1489,7 @@ postamble
 %
 % \nocite{*}
 % \bibliographystyle{plain}
-% \bibliography{coppe}
+% \bibliography{ufca}
 % \Finale
 % \PrintChanges
 % \PrintIndex

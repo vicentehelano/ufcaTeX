@@ -1,5 +1,5 @@
 %
-% This is file `coppe-plain.bst',
+% This is file `ufca-plain.bst',
 % A modification of `plainnat.bst' for use with natbib package 
 %
 % Numbered BibTeX style for using with CoppeTeX package.
