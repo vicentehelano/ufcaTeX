@@ -39,6 +39,7 @@ MAKEIDX = makeindex
 _printf=printf
 _rm=rm
 _tar=tar
+SHELL=/bin/bash
 
 CLSDIR=$(DESTDIR)/tex/latex/coppe
 BSTDIR=$(DESTDIR)/bibtex/bst/coppe
@@ -75,7 +76,7 @@ doc: $(PACKAGE_NAME).dtx
 	while grep "Rerun to get cross-references right" $(basename $<).log && \
 	  [ $$i -gt 0 ] ; do \
 	  $(TEX) $(TEXFLAGS) $< ; \
-	  let "i--"; \
+	  let "i+=1" ; \
 	done
 
 class: $(PACKAGE_NAME).cls
@@ -163,7 +164,7 @@ example.tex: $(PACKAGE_NAME).ins
 	while grep "Rerun to get cross-references right" $(basename $<).log && \
 	  [ $$i -gt 0 ] ; do \
 	  $(TEX) $(TEXFLAGS) $< ; \
-		let "i--"; \
+	  let "i+=1" ; \
 	done
 
 .PHONY: clean
