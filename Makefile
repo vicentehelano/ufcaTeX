@@ -1,9 +1,9 @@
 #
 # This is file `Makefile'.
 #
-# It should be used to strip the CoppeTeX class and its documentation.
+# It should be used to strip the ufcaTeX class and its documentation.
 #
-# Copyright (C) 2011 CoppeTeX Project and any individual authors listed
+# Copyright (C) 2020 ufcaTeX Project and any individual authors listed
 # elsewhere in this file.
 #
 # This program is free software; you can redistribute it and/or modify
@@ -19,19 +19,16 @@
 # version 3 along with this package (see COPYING file).
 # If not, see <http://www.gnu.org/licenses/>.
 #
-# $URL$
-# $Id$
-#
-# Author(s): Vicente H. F. Batista
+# Author(s): Vicente Helano
 #
 
-PROGRAM_NAME=CoppeTeX Makefile
+PROGRAM_NAME=ufcaTeX Makefile
 PACKAGE_NAME=ufca
 DOC_SOURCE=ufca.dtx
-VERSION="2.2"
-AUTHORS=Vicente H. F. Batista and George O. Ainsworth Jr.
-COPYRIGHT_YEAR=2011
-PACKAGE_BUGREPORT="helano@users.sourceforge.net"
+VERSION="1.0"
+AUTHORS=Vicente Helano
+COPYRIGHT_YEAR=2020
+PACKAGE_BUGREPORT="vicente.sobrinho@ufca.edu.br"
 
 TEX = pdflatex
 BIBTEX = bibtex
@@ -39,6 +36,7 @@ MAKEIDX = makeindex
 _printf=printf
 _rm=rm
 _tar=tar
+SHELL=/bin/bash
 
 CLSDIR=$(DESTDIR)/tex/latex/ufca
 BSTDIR=$(DESTDIR)/bibtex/bst/ufca
@@ -75,7 +73,7 @@ doc: $(PACKAGE_NAME).dtx
 	while grep "Rerun to get cross-references right" $(basename $<).log && \
 	  [ $$i -gt 0 ] ; do \
 	  $(TEX) $(TEXFLAGS) $< ; \
-	  let "i--"; \
+	  let "i+=1" ; \
 	done
 
 class: $(PACKAGE_NAME).cls
@@ -110,7 +108,7 @@ install: doc class example.pdf
 
 help:
 	@${_printf} "Usage: make [TARGET]\n" "${PROGRAM_NAME}"
-	@${_printf} "CoppeTeX development Makefile.\n"
+	@${_printf} "ufcaTeX development Makefile.\n"
 	@${_printf} "\n"
 	@${_printf} "  doc          generate the \`%s' documentation\n" \
 	            ${PACKAGE_NAME}
@@ -163,7 +161,7 @@ example.tex: $(PACKAGE_NAME).ins
 	while grep "Rerun to get cross-references right" $(basename $<).log && \
 	  [ $$i -gt 0 ] ; do \
 	  $(TEX) $(TEXFLAGS) $< ; \
-		let "i--"; \
+	  let "i+=1" ; \
 	done
 
 .PHONY: clean
