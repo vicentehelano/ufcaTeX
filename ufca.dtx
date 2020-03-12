@@ -5,7 +5,7 @@
 % It uses the doc utility to generate documentations for the 'ufca'
 % document class and the 'ufca-unsrt' BibTeX style.
 %
-% Copyright (C) 2020 CoppeTeX Project and any individual authors listed
+% Copyright (C) 2020 ufcaTeX Project and any individual authors listed
 % elsewhere in this file.
 %
 % This program is free software; you can redistribute it and/or modify
@@ -32,8 +32,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[colorlinks={true},breaklinks={true}]{hyperref}
 
-\def\CoppeTeX{{\rm C\kern-.05em{\sc o\kern-.025em p\kern-.025em
-p\kern-.025em e}}\kern-.08em
+\def\ufcaTeX{{\rm u\kern-.05em{\sc f\kern-.025em c\kern-.025em
+a}}\kern-.08em
 T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 
 \EnableCrossrefs \CodelineIndex \RecordChanges
@@ -71,9 +71,9 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % and abbreviations.}
 % \changes{v0.3}{2008/03/06}{Added `draft' option.}
 % \changes{v0.4}{2008/04/12}{Beta documentation.}
-% \changes{v1.0}{2008/06/10}{First \CoppeTeX\ release.}
-% \changes{v2.0}{2008/09/07}{\CoppeTeX\ release 2.0.}
-% \changes{v2.1}{2009/11/17}{\CoppeTeX\ release 2.1: Matching the new rules.}
+% \changes{v1.0}{2008/06/10}{First \ufcaTeX\ release.}
+% \changes{v2.0}{2008/09/07}{\ufcaTeX\ release 2.0.}
+% \changes{v2.1}{2009/11/17}{\ufcaTeX\ release 2.1: Matching the new rules.}
 % \changes{v2.1.1}{2009/11/19}{Removed |inputenc| dependence, by removing all
 % non-ASCII characters, and changed all files to the UTF-8 encoding.}
 % \changes{v2.2}{2011/02/04}{Matching new guidelines, including new logo.}
@@ -123,14 +123,14 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \GetFileInfo{ufca}
 %
 % \title{The |ufca| document class}
-% \author{Vicente H. F. Batista \and George O. Ainsworth Jr.}
+% \author{Vicente H. F. Batista}
 %
 % \maketitle
 %
 % \begin{abstract}
 %
 % In this work, it is described the |ufca| document class as well as other
-% files distributed by the \CoppeTeX\ project.  This class is suitable for
+% files distributed by the \ufcaTeX\ project.  This class is suitable for
 % writing academic dissertations, thesis and qualifying exams according to the
 % formatting rules of the Alberto Luiz Coimbra Institute for Graduate Studies
 % and Research in Engineering. The minimalist set of macro commands allows its
@@ -145,12 +145,12 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % when the authors have to prepare their manuscripts rigorously respecting
 % formatting rules imposed by publishers. Regardless of difficulty, a lot of thesis
 % presented to the Coordination of Graduate Studies and Research in Engineering
-% of the Federal University of Rio de Janeiro (COPPE/UFRJ) is typeseted in
-% \LaTeX. This demand motivated the creation of the \CoppeTeX\ project, which
-% tries to facilitate and encourage the use of \LaTeX\ within the COPPE/UFRJ
+% of the Federal University of Cariri (UFCA) is typeseted in
+% \LaTeX. This demand motivated the creation of the \ufcaTeX\ project, which
+% tries to facilitate and encourage the use of \LaTeX\ within the UFCA
 % scope.
 %
-% The |ufca| document class is the main product of \CoppeTeX.
+% The |ufca| document class is the main product of \ufcaTeX.
 % It was designed to be clear and succinct. It enables the
 % creation of dissertations, qualifying exams and thesis in a simple and
 % automatic way.
@@ -158,7 +158,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % on text
 % composition without worrying about margins sizes,
 % line spacing, paper size, vertical and horizontal alignment, etc.
-% The \CoppeTeX\ project comprehends also \BibTeX\ and MakeIndex style files
+% The \ufcaTeX\ project comprehends also \BibTeX\ and MakeIndex style files
 % for creating lists of references, symbols and abbreviations.
 % Although there aren't official guidelines to write qualifying
 % exams, we provide this option just for convenience, as this exam is a requisite
@@ -190,7 +190,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \DescribeMacro{\frontmatter}
 % \DescribeMacro{\mainmatter}
 % \DescribeMacro{\backmatter}
-% A thesis to be approved by the Academic Registry at COPPE/UFRJ
+% A thesis to be approved by the Academic Registry at UFCA
 % must contain three-parts:
 % \emph{front}, \emph{main} and \emph{back} matters~\cite{TNR08a}.
 % Each one of these parts is started by calling its corresponding macro
@@ -235,7 +235,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %
 % \DescribeMacro{\advisor}
 % \DescribeMacro{\examiner}
-% Every COPPE student is coordinated by at least one advisor.
+% Every UFCA student is coordinated by at least one advisor.
 % M.Sc. and D.Sc. students can have at most 2 and 3 advisors,
 % respectively.
 % Their names must be provided by issuing the command |\advisor|
@@ -356,7 +356,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \subsection*{References}
 %
 % It is well known that bibliography databases can be easily maintained with
-% the aid of \BibTeX. Thus, the \CoppeTeX\ project designed two \BibTeX\ styles,
+% the aid of \BibTeX. Thus, the \ufcaTeX\ project designed two \BibTeX\ styles,
 % |ufca-plain.bst| and |ufca-unsrt.bst|.
 % The |ufca-plain.bst| creates a list of references alphabetically sorted.
 % The later is a numbered style,
@@ -434,11 +434,13 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %
 % \section{A simple example}
 %
-% \label{COPPE:SAMPLE}
+% \label{UFCA:SAMPLE}
 %    \begin{macrocode}
 %<*example>
-\documentclass[dsc,numbers]{ufca}
+\documentclass[msc,numbers]{ufca}
+\usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb}
+\usepackage{mathptmx}
 \usepackage{hyperref}
 
 \makelosymbols
@@ -448,21 +450,26 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \title{T\'itulo da Tese}
   \foreigntitle{Thesis Title}
   \author{Nome do Autor}{Sobrenome}
-  \advisor{Prof.}{Nome do Primeiro Orientador}{Sobrenome}{D.Sc.}
-  \advisor{Prof.}{Nome do Segundo Orientador}{Sobrenome}{Ph.D.}
-  \advisor{Prof.}{Nome do Terceiro Orientador}{Sobrenome}{D.Sc.}
+  \advisor{Prof.}{Nome do Primeiro Orientador}{Sobrenome}{D.Sc.}{CCT/UFCA}
+  \advisor{Prof.}{Nome do Segundo Orientador}{Sobrenome}{Ph.D.}{CCT/UFCA}
+  \advisor{Prof.}{Nome do Terceiro Orientador}{Sobrenome}{D.Sc.}{CCT/UFCA}
 
-  \examiner{Prof.}{Nome do Primeiro Examinador Sobrenome}{D.Sc.}
-  \examiner{Prof.}{Nome do Segundo Examinador Sobrenome}{Ph.D.}
-  \examiner{Prof.}{Nome do Terceiro Examinador Sobrenome}{D.Sc.}
-  \examiner{Prof.}{Nome do Quarto Examinador Sobrenome}{Ph.D.}
-  \examiner{Prof.}{Nome do Quinto Examinador Sobrenome}{Ph.D.}
-  \department{PEC}
-  \date{02}{2011}
+  \examiner{Prof.}{Nome do Primeiro Examinador}{Sobrenome}{D.Sc.}{CCT/UFCA}
+  \examiner{Prof.}{Nome do Segundo Examinador}{Sobrenome}{Ph.D.}{CCT/UFCA}
+  \examiner{Prof.}{Nome do Terceiro Examinador}{Sobrenome}{D.Sc.}{IMPA}
+  \examiner{Prof.}{Nome do Quarto Examinador}{Sobrenome}{Ph.D.}{IME/USP}
+  \examiner{Prof.}{Nome do Quinto Examinador}{Sobrenome}{Ph.D.}{IM/UFRJ}
+  \program{PROFMAT}
+  \date{08}{02}{2011}
+  \cataloging{S586b}{511.12}
 
   \keyword{Primeira palavra-chave}
   \keyword{Segunda palavra-chave}
   \keyword{Terceira palavra-chave}
+
+  \foreignkeyword{First keyword}
+  \foreignkeyword{Second keyword}
+  \foreignkeyword{Third keyword}
 
   \maketitle
 
@@ -494,11 +501,9 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \mainmatter
   \chapter{Introdu{\c c}\~ao}
 
-  Segundo a norma de formata{\c c}\~ao de teses e disserta{\c c}\~oes do
-  Instituto Alberto Luiz Coimbra de P\'os-gradua{\c c}\~ao e Pesquisa de
-  Engenharia (COPPE), toda abreviatura deve ser definida antes de
-  utilizada.\abbrev{COPPE}{Instituto Alberto Luiz Coimbra de P\'os-gradua{\c
-  c}\~ao e Pesquisa de Engenharia}
+  Segundo a norma de formata{\c c}\~ao de teses e disserta{\c c}\~oes da
+  Universidade Federal do Cariri (UFCA), toda abreviatura deve ser definida antes de
+  utilizada.\abbrev{UFCA}{Universidade Federal do Cariri}
 
   Do mesmo modo, \'e imprescind\'ivel definir os s\'imbolos, tal como o
   conjunto dos n\'umeros reais $\mathbb{R}$ e o conjunto vazio $\emptyset$.
@@ -509,8 +514,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 
   Para ilustrar a completa ades\~ao ao estilo de cita{\c c}\~oes e listagem de
   refer\^encias bibliogr\'aficas, a Tabela~\ref{tab:citation} apresenta cita{\c
-  c}\~oes de alguns dos trabalhos contidos na norma fornecida pela CPGP da
-  COPPE, utilizando o estilo num\'erico.
+  c}\~oes de alguns dos trabalhos utilizando o estilo num\'erico.
 
   \begin{table}[h]
   \caption{Exemplos de cita{\c c}\~oes utilizando o comando padr\~ao
@@ -565,7 +569,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \def\fileversion{v3.0}
 \def\filedate{2020/03/02}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{ufca}[\filedate\ \fileversion\ COPPE Dissertations and Thesis]
+\ProvidesClass{ufca}[\filedate\ \fileversion\ UFCA academic monographs.]
 \LoadClass[12pt,a4paper,oneside]{book}
 \RequirePackage[sort&compress]{natbib}
 \RequirePackage{hyphenat}
@@ -574,11 +578,13 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \RequirePackage{graphicx}
 \RequirePackage{setspace}
 \RequirePackage{tabularx}
+\RequirePackage{booktabs}
 \RequirePackage{eqparbox}
+\RequirePackage{multirow}
 \RequirePackage{ltxcmds}
 \RequirePackage[a4paper,bindingoffset=0.0cm,vcentering=true,%
 top=2.5cm,bottom=2.5cm,left=3.0cm,right=3.0cm]{geometry}
-\def\CoppeTeX{{\rm C\kern-.05em{\sc o\kern-.025em p\kern-.025em
+\def\ufcaTeX{{\rm C\kern-.05em{\sc o\kern-.025em p\kern-.025em
 p\kern-.025em e}}\kern-.08em
 T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %    \end{macrocode}
@@ -592,6 +598,22 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % Otherwise, Portuguese is considered the main language.
 \newif\if@english\@englishfalse
 \DeclareOption{english}{\@englishtrue}
+\DeclareOption{lic}{%
+  \newcommand{\@degree}{Lic.}
+  \newcommand{\@degreename}{Licenciatura}
+  \newcommand{\local@degname}{Licenciado}
+  \newcommand{\foreign@degname}{Licenciate}
+  \newcommand\local@doctype{Monografia}
+  \newcommand\foreign@doctype{Monograph}
+}
+\DeclareOption{bsc}{%
+  \newcommand{\@degree}{B.Sc.}
+  \newcommand{\@degreename}{Graduação}
+  \newcommand{\local@degname}{Bacharel}
+  \newcommand{\foreign@degname}{Bachelor}
+  \newcommand\local@doctype{Monografia}
+  \newcommand\foreign@doctype{Monograph}
+}
 \DeclareOption{msc}{%
   \newcommand{\@degree}{M.Sc.}
   \newcommand{\@degreename}{Mestrado}
@@ -599,15 +621,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \newcommand{\foreign@degname}{Master}
   \newcommand\local@doctype{Disserta{\c c}{\~ a}o}
   \newcommand\foreign@doctype{Dissertation}
-}
-\DeclareOption{dscexam}{%
-  \newcommand{\@degree}{D.Sc.}
-  \newcommand{\@degreename}{Doutorado}
-  \newcommand{\local@degname}{Doutor}
-  \newcommand{\foreign@degname}{Doctor}
-  \setboolean{maledoc}{true}
-  \newcommand\local@doctype{Exame de Qualifica{\c c}{\~ a}o}
-  \newcommand\foreign@doctype{Qualifying Exam}
 }
 \DeclareOption{dsc}{%
   \newcommand{\@degree}{D.Sc.}
@@ -643,54 +656,20 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %    \end{macrocode}
 % \changes{v3.0}{2020/03/02}{Added support for monographs in English.}
 %
-% \begin{macro}{\department}
+% \begin{macro}{\program}
 % This macro is used to set the author's affiliation. There are twelve options
-% which correspond to all academic units at COPPE/UFRJ. It defines the current
+% which correspond to all academic units at UFCA. It defines the current
 % and the foreign names of these units.
 %    \begin{macrocode}
-\newcommand\department[1]{%
-  \ifthenelse{\equal{#1}{PEB}}
-    {\global\def\local@deptname{Engenharia Biom{\' e}dica}
-     \global\def\foreign@deptname{Biomedical Engineering}}{}
-  \ifthenelse{\equal{#1}{PEC}}
-    {\global\def\local@deptname{Engenharia Civil}
-     \global\def\foreign@deptname{Civil Engineering}}{}
-  \ifthenelse{\equal{#1}{PEE}}
-    {\global\def\local@deptname{Engenharia El{\' e}trica}
-     \global\def\foreign@deptname{Electrical Engineering}}{}
-  \ifthenelse{\equal{#1}{PEM}}
-    {\global\def\local@deptname{Engenharia Mec{\^ a}nica}
-     \global\def\foreign@deptname{Mechanical Engineering}}{}
-  \ifthenelse{\equal{#1}{PEMM}}
-    {\global\def\local@deptname{Engenharia Metal{\' u}rgica e de Materiais}
-\global\def\foreign@deptname{Metallurgical and Materials Engineering}}{}
-  \ifthenelse{\equal{#1}{PEN}}
-    {\global\def\local@deptname{Engenharia Nuclear}
-     \global\def\foreign@deptname{Nuclear Engineering}}{}
-  \ifthenelse{\equal{#1}{PENO}}
-    {\global\def\local@deptname{Engenharia Oce{\^ a}nica}
-     \global\def\foreign@deptname{Ocean Engineering}}{}
-  \ifthenelse{\equal{#1}{PPE}}
-    {\global\def\local@deptname{Planejamento Energ{\' e}tico}
-     \global\def\foreign@deptname{Energy Planning}}{}
-  \ifthenelse{\equal{#1}{PEP}}
-    {\global\def\local@deptname{Engenharia de Produ{\c c}{\~ a}o}
-     \global\def\foreign@deptname{Production Engineering}}{}
-  \ifthenelse{\equal{#1}{PEQ}}
-    {\global\def\local@deptname{Engenharia Qu{\' i}mica}
-     \global\def\foreign@deptname{Chemical Engineering}}{}
-  \ifthenelse{\equal{#1}{PESC}}
-    {\global\def\local@deptname{Engenharia de Sistemas e Computa{\c c}{\~ a}o}
-     \global\def\foreign@deptname{Systems Engineering and Computer Science}}{}
-  \ifthenelse{\equal{#1}{PET}}
-    {\global\def\local@deptname{Engenharia de Transportes}
-     \global\def\foreign@deptname{Transportation Engineering}}{}
-  \ifthenelse{\equal{#1}{PENT}}
-    {\global\def\local@deptname{Engenharia de Nanotecnologia}
-      \global\def\foreign@deptname{Nanotechnology Engineering}}{}
+\newcommand\program[1]{%
+  \ifthenelse{\equal{#1}{PROFMAT}}
+    {\global\def\local@progname{Matem{\' a}tica em Rede Nacional}
+     \global\def\local@coursename{Matem{\' a}tica}
+     \global\def\foreign@progname{Mathematics}
+     \global\def\local@centername{Centro de Ci{\^ e}ncias e Tecnologia}
+     \global\def\foreign@centername{Science and Technology Center}}{}
 }
 %    \end{macrocode}
-% \changes{v3.0}{2020/03/02}{Added new course on Nanotechnology.}
 % \end{macro}
 %
 %
@@ -716,11 +695,12 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % Defines globally the title, name and academic degree of the advisors.
 %    \begin{macrocode}
 \newcount\@advisor\@advisor0
-\newcommand\advisor[4]{%
-  \global\@namedef{CoppeAdvisorTitle:\expandafter\the\@advisor}{#1}
-  \global\@namedef{CoppeAdvisorName:\expandafter\the\@advisor}{#2}
-  \global\@namedef{CoppeAdvisorSurname:\expandafter\the\@advisor}{#3}
-  \global\@namedef{CoppeAdvisorDegree:\expandafter\the\@advisor}{#4}
+\newcommand\advisor[5]{%
+  \global\@namedef{UfcaAdvisorTitle:\expandafter\the\@advisor}{#1}
+  \global\@namedef{UfcaAdvisorName:\expandafter\the\@advisor}{#2}
+  \global\@namedef{UfcaAdvisorSurname:\expandafter\the\@advisor}{#3}
+  \global\@namedef{UfcaAdvisorDegree:\expandafter\the\@advisor}{#4}
+  \global\@namedef{UfcaAdvisorAffiliation:\expandafter\the\@advisor}{#5}
   \global\advance\@advisor by 1
   \ifnum\@advisor>1
     \renewcommand\local@advisorstring{Orientadores}
@@ -735,8 +715,12 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \begin{macro}{\examiner}
 %    \begin{macrocode}
 \newcount\@examiner\@examiner0
-\newcommand\examiner[3]{%
-  \global\@namedef{CoppeExaminer:\expandafter\the\@examiner}{#1\ #2}
+\newcommand\examiner[5]{%
+  \global\@namedef{UfcaExaminerTitle:\expandafter\the\@examiner}{#1}
+  \global\@namedef{UfcaExaminerName:\expandafter\the\@examiner}{#2}
+  \global\@namedef{UfcaExaminerSurname:\expandafter\the\@examiner}{#3}
+  \global\@namedef{UfcaExaminerDegree:\expandafter\the\@examiner}{#4}
+  \global\@namedef{UfcaExaminerAffiliation:\expandafter\the\@examiner}{#5}
   \global\advance\@examiner by 1
 }
 %    \end{macrocode}
@@ -757,9 +741,10 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \begin{macro}{\date}
 % This code makes easy to switch from dates in different languages.
 %    \begin{macrocode}
-\renewcommand\date[2]{%
-  \month=#1
-  \year=#2
+\renewcommand\date[3]{%
+  \day=#1
+  \month=#2
+  \year=#3
 }
 %    \end{macrocode}
 % \end{macro}
@@ -784,8 +769,18 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %    \begin{macrocode}
 \newcounter{keywords}
 \newcommand\keyword[1]{%
-  \global\@namedef{CoppeKeyword:\expandafter\the\c@keywords}{#1}
+  \global\@namedef{UfcaKeyword:\expandafter\the\c@keywords}{#1}
   \global\addtocounter{keywords}{1}
+}
+%    \end{macrocode}
+% \end{macro}
+%
+% \begin{macro}{\foreignkeyword}
+%    \begin{macrocode}
+\newcounter{foreignkeywords}
+\newcommand\foreignkeyword[1]{%
+  \global\@namedef{UfcaForeignKeyword:\expandafter\the\c@foreignkeywords}{#1}
+  \global\addtocounter{foreignkeywords}{1}
 }
 %    \end{macrocode}
 % \end{macro}
@@ -805,6 +800,9 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \clearpage
   \pagestyle{plain}
   \ifthenelse{\boolean{maledoc}}{}{\makecatalog}%
+  \clearpage
+  \makeapprovalpage
+  \clearpage
 }
 %    \end{macrocode}
 % \end{macro}
@@ -840,22 +838,51 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \pagenumbering{alph}
   \ltx@ifpackageloaded{hyperref}{\ufca@hypersetup}{}%
   \begin{titlepage}
-  \begin{flushleft}
+  \noindent\begin{center}
   \vspace*{1.5mm}
-  \setlength\baselineskip{0pt}
-  \setlength\parskip{1mm}
-  \makebox[20mm][c]{\hspace{4.8cm}\includegraphics{ufca-logo}}
-  \end{flushleft}
-  \vspace{1.05cm}
+  \makebox[30mm][c]{\includegraphics[scale=0.525]{ufca-logo}}\par
+  \vspace*{1.5mm}
+  \textbf{\MakeUppercase UNIVERSIDADE FEDERAL DO CARIRI}\par
+  \textbf{\MakeUppercase\local@centername}\par
+  \textbf{PROGRAMA DE P{\' O}S-GRADUA{\c C}{\~ A}O EM \MakeUppercase\local@progname}
+  \end{center}
+  \vspace*{1.8cm}
   \begin{center}
+  \textbf{\nohyphens{\MakeUppercase\@authname\ \MakeUppercase\@authsurn}}\par
+  \vspace*{3cm}
+  \textbf{\nohyphens{%
+    \if@english
+      \MakeUppercase\foreign@title
+    \else
+      \MakeUppercase\local@title
+    \fi}}\par
+  \end{center}
+  \vspace*{\fill}
+  \begin{center}
+  \textbf{\MakeUppercase\local@cityname}\par
+  \textbf{\number\year}
+  \end{center}
+  \end{titlepage}
+  \global\let\maketitle\relax%
+  \global\let\and\relax}
+%    \end{macrocode}
+% \changes{v0.3}{2008/03/07}{Added number of examiners test.}
+% \changes{v0.3}{2008/03/07}{Generalization.}
+% \changes{v2.2}{2011/02/04}{Using |ltxcmds| to check if |hyperref| was loaded.}
+% \end{macro}
+%
+%    \begin{macrocode}
+\newcommand\makefrontpage{%
+  \begin{center}
+  \vspace*{0.3cm}
+  \nohyphens{\MakeUppercase\@authname\ \MakeUppercase\@authsurn}\par
+  \vspace*{3.3cm}
   \nohyphens{%
     \if@english
       \MakeUppercase\foreign@title
     \else
       \MakeUppercase\local@title
     \fi}\par
-  \vspace*{3cm}
-  \nohyphens{\@authname\ \@authsurn}\par
   \end{center}
   \vspace*{2.1cm}
   \begin{flushright}
@@ -870,15 +897,15 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
     \toks@={}
     \@whilenum \count1<\@advisor \do{%
     \ifcase\count1 % same as \ifnum0=\count1
-      \toks@=\expandafter{\csname CoppeAdvisorName:\the\count1%
+      \toks@=\expandafter{\csname UfcaAdvisorName:\the\count1%
         \expandafter\endcsname\expandafter\space%
-        \csname CoppeAdvisorSurname:\the\count1\endcsname\\}
+        \csname UfcaAdvisorSurname:\the\count1\endcsname\\}
     \else
       \toks@=\expandafter\expandafter\expandafter{%
         \expandafter\the\expandafter\toks@%
         \expandafter&\expandafter\space%
-        \csname CoppeAdvisorName:\the\count1\expandafter\endcsname%
-        \expandafter\space\csname CoppeAdvisorSurname:\the\count1\endcsname\\
+        \csname UfcaAdvisorName:\the\count1\expandafter\endcsname%
+        \expandafter\space\csname UfcaAdvisorSurname:\the\count1\endcsname\\
       }%
     \fi
     \advance\count1 by 1}
@@ -887,76 +914,47 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \end{flushright}
   \vspace*{\fill}
   \begin{center}
-  \local@cityname\par
-  \local@monthname\ de \number\year
-  \end{center}
-  \end{titlepage}
-  \global\let\maketitle\relax%
-  \global\let\and\relax}
+  \MakeUppercase\local@cityname\par
+  \number\year
+  \end{center}}
 %    \end{macrocode}
-% \changes{v0.3}{2008/03/07}{Added number of examiners test.}
-% \changes{v0.3}{2008/03/07}{Generalization.}
-% \changes{v2.2}{2011/02/04}{Using |ltxcmds| to check if |hyperref| was loaded.}
-% \end{macro}
+% \changes{v3.0}{2020/02/03}{New approval page layout.}
 %
 %    \begin{macrocode}
-\newcommand\makefrontpage{%
+\newcommand\makeapprovalpage{%
   \begin{center}
+    {\MakeUppercase\@authname\ \MakeUppercase\@authsurn}\par
+    \vspace*{1.5cm}
     \sloppy\nohyphens{
       \if@english
         \MakeUppercase\foreign@title
       \else
         \MakeUppercase\local@title
       \fi}\par
-    \vspace*{7mm}
-    {\@authname\ \@authsurn}\par
   \end{center}\par
-  \vspace*{4mm}
-  \frontpage@maintext
-  \vspace*{16mm}
-  \nohyphens{%
-  \noindent\begin{tabularx}{\textwidth}[b]{@{}l@{ }>{\raggedright\arraybackslash}X@{}}
-    \local@advisorstring: &
+  \vspace*{1cm}
+  \begin{flushright}
+  \begin{minipage}{8.45cm}
+  \frontcover@maintext
+  \end{minipage}
+  \end{flushright}\par
+  \vspace*{15mm}
+  \noindent\local@approvedname: \number\day\ de\ \MakeLowercase\local@monthname\ de\ \number\year.\par
+  \vspace*{2cm}
+  \noindent\begin{center}
+    \noindent{BANCA EXAMINADORA}\par
     \count1=0
-    \toks@={}
-    \@whilenum \count1<\@advisor \do{%
-    \ifcase\count1 % same as \ifnum0=\count1
-      \toks@=\expandafter{\csname CoppeAdvisorName:\the\count1%
-        \expandafter\endcsname\expandafter\space%
-        \csname CoppeAdvisorSurname:\the\count1\endcsname\\}
-    \else
-      \toks@=\expandafter\expandafter\expandafter{%
-        \expandafter\the\expandafter\toks@%
-        \expandafter&\expandafter\space%
-        \csname CoppeAdvisorName:\the\count1\expandafter\endcsname%
-        \expandafter\space\csname CoppeAdvisorSurname:\the\count1\endcsname\\
-      }%
-    \fi
-    \advance\count1 by 1}
-    \the\toks@
-  \end{tabularx}\par
-  \vspace*{20mm}
-  \noindent\begin{tabularx}{\textwidth}[b]{@{}l@{ }>{\raggedright\arraybackslash}X@{}}
-    Aprovada por: &
-    \count1=0
-    \toks@={}
-    \@whilenum \count1<\@examiner \do{%
-    \ifcase\count1 % same as \ifnum0=\count1
-      \toks@=\expandafter{\csname CoppeExaminer:\the\count1%
-        \expandafter\endcsname\expandafter\\}
-    \else
-      \toks@=\expandafter\expandafter\expandafter{%
-        \expandafter\the\expandafter\toks@%
-        \expandafter&\expandafter\space%
-        \csname CoppeExaminer:\the\count1\expandafter\endcsname%
-        \expandafter\space\\
-      }%
-    \fi
-    \advance\count1 by 1}
-    \the\toks@
-    \end{tabularx}}\par
-  \vspace*{\fill}
-  \frontpage@bottomtext}
+    \@whilenum \count1<\@examiner \do {
+        \vskip26\p@ \baselineskip12pt
+    \eqmakebox[signture@list][c]{\hrulefill}\\
+    \eqmakebox[signture@list][c]{%
+        \ \ \ \protect\csname UfcaExaminerTitle:\the\count1\endcsname\space\csname UfcaExaminerDegree:\the\count1\endcsname\space\csname UfcaExaminerName:\the\count1\endcsname\space\csname UfcaExaminerSurname:\the\count1\endcsname\ \ \ }\\
+        \vskip3\p@ \baselineskip12pt
+    \eqmakebox[signture@list][c]{%
+	    \ \ \ \protect\csname UfcaExaminerAffiliation:\the\count1 \endcsname\ \ \ }\\
+        \advance\count1 by 1}
+  \end{center}\par
+  \vspace*{\fill}}
 %    \end{macrocode}
 % \changes{v3.0}{2020/02/03}{New approval page layout.}
 %    \begin{macrocode}
@@ -971,15 +969,15 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \@whilenum\count@<\value{keywords}\do{%
     % * a keyword separator is not necessary,
     %    if there is just one keyword
-    % * \csname CoppeKeyword:\the\count@\endcsname must be expanded
+    % * \csname UfcaKeyword:\the\count@\endcsname must be expanded
     %    at least once, to get rid of the loop depended \count@
     \ifcase\count@ % same as \ifnum0=\count@
-      \toks@=\expandafter{\csname CoppeKeyword:\the\count@\endcsname}%
+      \toks@=\expandafter{\csname UfcaKeyword:\the\count@\endcsname}%
     \else
       \toks@=\expandafter\expandafter\expandafter{%
         \expandafter\the\expandafter\toks@
         \expandafter;\expandafter\space
-        \csname CoppeKeyword:\the\count@\endcsname
+        \csname UfcaKeyword:\the\count@\endcsname
       }%
     \fi
     \advance\count@ by 1 %
@@ -993,8 +991,8 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \hypersetup{%
   pdfauthor={\@authname\ \@authsurn},
   pdftitle={\local@title},
-  pdfsubject={\local@doctype\ de \@degreename\ em \local@deptname\ da COPPE/UFRJ},
-  pdfcreator={LaTeX with CoppeTeX toolkit},
+  pdfsubject={\local@doctype\ de \@degreename\ em \local@coursename\ da UFCA},
+  pdfcreator={LaTeX with ufcaTeX toolkit},
   breaklinks={true},
   raiselinks={true},
   pageanchor={true},
@@ -1008,22 +1006,15 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % checked to be undefined using the
 % plain \TeX\ command |\@isundefined|~\cite{TeX:FAQ}.
 %    \begin{macrocode}
-\newcommand\makecatalog{%
-  \vspace*{\fill}
-  \begin{center}
-    \setlength{\fboxsep}{5mm}
-    \framebox[120mm][c]{\makebox[5mm][c]{}%
-      \begin{minipage}[c]{105mm}
+\newcommand\makedata{%
+      \begin{minipage}[c]{0.8\textwidth}
       \setlength{\parindent}{5mm}
-      \noindent\sloppy\nohyphens\@authsurn,
-      \nohyphens\@authname\par
       \nohyphens{%
         \if@english
           \foreign@title%
         \else
           \local@title%
-        \fi/\@authname\ \@authsurn. -- \local@cityname:
-      UFRJ/COPPE, \number\year.}\par
+        \fi~/~\@authname\ \@authsurn. -- \number\year.}\par
       \pageref{front:pageno},
       \pageref{LastPage}
       p.\@ifundefined{r@cat:lofflag}{}{\pageref{cat:lofflag}} $29,7$cm.\par
@@ -1038,35 +1029,57 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
         \toks@={}
         \@whilenum \count1<\@advisor \do{%
         \ifcase\count1 % same as \ifnum0=\count1
-          \toks@=\expandafter{\csname CoppeAdvisorName:\the\count1%
+          \toks@=\expandafter{\csname UfcaAdvisorName:\the\count1%
           \expandafter\endcsname\expandafter\space%
-          \csname CoppeAdvisorSurname:\the\count1\endcsname\\}
+          \csname UfcaAdvisorSurname:\the\count1\endcsname\\}
         \else
           \toks@=\expandafter\expandafter\expandafter{%
             \expandafter\the\expandafter\toks@
             \expandafter&\expandafter\space
-            \csname CoppeAdvisorName:\the\count1\expandafter\endcsname%
-            \expandafter\space\csname CoppeAdvisorSurname:\the\count1\endcsname\\
+            \csname UfcaAdvisorName:\the\count1\expandafter\endcsname%
+            \expandafter\space\csname UfcaAdvisorSurname:\the\count1\endcsname\\
           }%
         \fi
         \advance\count1 by 1}
         \the\toks@
       \end{tabularx}}\par
-      \nohyphens{\local@doctype\ ({\MakeLowercase\@degreename}) --
-      UFRJ/COPPE/Programa de \local@deptname, \number\year.}\par
-      Refer{\^ e}ncias Bibliogr{\' a}ficas: p. \pageref{bib:begin} -- \pageref{bib:end}.\par
+      \nohyphens{\local@doctype\ ({\@degreename}) --
+      \local@universityname, \local@centername, Programa de Pós-graduação em \local@progname, \local@cityname, \number\year.}\par
+      Inclui refer{\^ e}ncias bibliogr{\' a}ficas: p. \pageref{bib:begin} -- \pageref{bib:end}.\par
       \count1=0
       \count2=1
       \nohyphens{\@whilenum \count1<\value{keywords} \do {%
-        \number\count2. \csname CoppeKeyword:\the\count1 \endcsname.
+        \number\count2. \csname UfcaKeyword:\the\count1 \endcsname.
         \advance\count1 by 1
         \advance\count2 by 1}
-      I. \csname CoppeAdvisorSurname:0\endcsname,%
-      \ \csname CoppeAdvisorName:0\endcsname%
-      \ifthenelse{\@advisor>1}{\ \emph{et~al.}{}}.
-      II. \local@universityname, COPPE, Programa de \local@deptname.
+      I. \csname UfcaAdvisorSurname:0\endcsname,%
+      \ \csname UfcaAdvisorName:0\endcsname%
+      \ifthenelse{\@advisor>1}{\ \emph{et~al.}{}}~(\ifthenelse{\@advisor>1}{Orientadores}{Orientador}).
+      II. \local@universityname, \local@centername, Programa de Pós-graduação em \local@progname.
       III. T{\' i}tulo.}
-    \end{minipage}}
+      \end{minipage}}
+
+\newcommand\cataloging[2]{%
+  \global\@namedef{UfcaCatalogAuthorCode:\expandafter\the\c@keywords}{#1}
+  \global\@namedef{UfcaCatalogCdd:\expandafter\the\c@keywords}{#2}
+}
+
+\newcommand\makecatalog{%
+  \vspace*{\fill}
+  \begin{center}
+	  {\small\textbf{Dados Internacionais de Catalogação na Publicação}}\par
+	  \vspace*{-0.4em}
+	  {\small\textbf{Sistema de Bibliotecas da Universidade Federal do Cariri}}\par
+	  \vspace*{0.4em}
+      \begin{tabularx}{\textwidth}{lX}
+        \toprule
+        \csname UfcaCatalogAuthorCode:0\endcsname & {\small \setlength{\parindent}{5mm}
+      \noindent\sloppy\nohyphens\@authsurn,
+      \nohyphens\@authname\par}\\
+              & {\small\makedata}\\
+              & \multicolumn{1}{r}{CDD \csname UfcaCatalogCdd:0\endcsname}\\
+        \bottomrule
+      \end{tabularx}
   \end{center}
   \vspace*{\fill}}
 %    \end{macrocode}
@@ -1093,40 +1106,18 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \newenvironment{abstract}{%
   \clearpage
   \thispagestyle{plain}
-  \abstract@toptext\par
-  \vspace*{8.6mm}
-  \begin{center}
-    \sloppy\nohyphens{\MakeUppercase\local@title}\par
-    \vspace*{13.2mm}
-    \@authname\ \@authsurn \par
-    \vspace*{7mm}
-    \local@monthname/\number\year
+  \noindent\begin{center}
+    \noindent\abstract@toptext
   \end{center}\par
-  \vspace*{\fill}
-  \noindent%
-  \begin{tabularx}{\textwidth}[b]{@{}l@{ }>{\raggedright\arraybackslash}X@{}}
-    \local@advisorstring: &
-    \count1=0
-    \toks@={}
-    \@whilenum \count1<\@advisor \do{%
-    \ifcase\count1 % same as \ifnum0=\count1
-      \toks@=\expandafter{\csname CoppeAdvisorName:\the\count1%
-      \expandafter\endcsname\expandafter\space%
-      \csname CoppeAdvisorSurname:\the\count1\endcsname\\}
-    \else
-      \toks@=\expandafter\expandafter\expandafter{%
-        \expandafter\the\expandafter\toks@
-        \expandafter&\expandafter\space
-        \csname CoppeAdvisorName:\the\count1\expandafter\endcsname%
-        \expandafter\space\csname CoppeAdvisorSurname:\the\count1\endcsname\\
-      }%
-    \fi
-    \advance\count1 by 1}
-    \the\toks@
-  \end{tabularx}\par
-  \vspace*{2mm}
-  \noindent\local@deptstring: \local@deptname\par
-  \vspace*{7mm}}{\vspace*{\fill}}
+  \noindent\begin{minipage}[c]{\textwidth}
+  \vspace*{1.5cm}}{\end{minipage}\par
+    \vspace*{0.6cm}
+    \begin{flushleft}
+    \noindent\textbf{Palavras-chave:}\ 
+      \count1=0
+      \nohyphens{\@whilenum \count1<\value{keywords} \do {%
+        \csname UfcaKeyword:\the\count1 \endcsname.
+        \advance\count1 by 1}}\end{flushleft}\par\vspace*{\fill}}
 %    \end{macrocode}
 % \changes{v0.5}{2008/05/25}{Changed from macro to environment.}
 % \end{environment}
@@ -1137,40 +1128,19 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \clearpage
   \thispagestyle{plain}
   \begin{otherlanguage}{english}
-  \foreignabstract@toptext\par
-  \vspace*{8.6mm}
-  \begin{center}
-    \sloppy\nohyphens{\MakeUppercase\foreign@title}\par
-    \vspace*{13.2mm}
-    \@authname\ \@authsurn \par
-    \vspace*{7mm}
-    \foreign@monthname/\number\year
+  \noindent\begin{center}
+    \noindent\foreignabstract@toptext
   \end{center}\par
-  \vspace*{\fill}
-  \noindent%
-  \begin{tabularx}{\textwidth}[b]{@{}l@{ }>{\raggedright\arraybackslash}X@{}}
-    \foreign@advisorstring: &
-    \count1=0
-    \toks@={}
-    \@whilenum \count1<\@advisor \do{%
-    \ifcase\count1 % same as \ifnum0=\count1
-      \toks@=\expandafter{\csname CoppeAdvisorName:\the\count1%
-      \expandafter\endcsname\expandafter\space%
-      \csname CoppeAdvisorSurname:\the\count1\endcsname\\}
-    \else
-      \toks@=\expandafter\expandafter\expandafter{%
-        \expandafter\the\expandafter\toks@
-        \expandafter&\expandafter\space
-        \csname CoppeAdvisorName:\the\count1\expandafter\endcsname%
-        \expandafter\space\csname CoppeAdvisorSurname:\the\count1\endcsname\\
-      }%
-    \fi
-    \advance\count1 by 1}
-    \the\toks@
-  \end{tabularx}\par
-  \vspace*{2mm}
-  \noindent\foreign@deptstring: \foreign@deptname\par
-  \vspace*{7mm}}{%
+  \noindent\begin{minipage}[c]{\textwidth}
+  \vspace*{1.5cm}}{%
+  \end{minipage}\par
+    \vspace*{0.6cm}
+    \begin{flushleft}
+    \noindent\textbf{Keywords:}\ 
+      \count1=0
+      \nohyphens{\@whilenum \count1<\value{foreignkeywords} \do {%
+        \csname UfcaForeignKeyword:\the\count1 \endcsname.
+        \advance\count1 by 1}}\end{flushleft}\par
   \end{otherlanguage}
   \vspace*{\fill}
   \global\let\@author\@empty
@@ -1408,35 +1378,25 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \newcommand\local@advisorstring{Orientador}
 \newcommand\foreign@advisorstring{Advisor}
 \ifthenelse{\boolean{maledoc}}{%
-  \newcommand\local@approvedname{Examinado por}%
+  \newcommand\local@approvedname{Aprovado em}%
 }{%
-  \newcommand\local@approvedname{Examinada por}%
+  \newcommand\local@approvedname{Aprovada em}%
 }
-\newcommand\local@universityname{Universidade Federal do Rio de Janeiro}
+\newcommand\local@universityname{Universidade Federal do Cariri}
 \newcommand\local@deptstring{Programa}
 \newcommand\foreign@deptstring{Department}
-\newcommand\local@cityname{Rio de Janeiro}
-\newcommand\local@statename{RJ}
+\newcommand\local@cityname{Juazeiro do Norte}
+\newcommand\local@statename{CE}
 \newcommand\local@countryname{Brasil}
 %
 \newcommand\frontcover@maintext{
   \sloppy\nohyphens{\local@doctype\ de \@degreename\
   \ifthenelse{\boolean{maledoc}}{apresentado}{apresentada}
-  ao Programa de P{\' o}s-gradua{\c c}{\~ a}o em \local@deptname,
-  COPPE, da \local@universityname, como parte dos requisitos
+  ao Programa de P{\' o}s-gradua{\c c}{\~ a}o em \local@progname\
+  do \local@centername\
+  da \local@universityname, como parte dos requisitos
   necess{\' a}rios {\` a} obten{\c c}{\~ a}o do t{\' i}tulo de
-  \local@degname\ em \local@deptname.}
-}
-%
-\newcommand\frontpage@maintext{
-  \noindent {\MakeUppercase\local@doctype}
-  \ifthenelse{\boolean{maledoc}}{SUBMETIDO}{SUBMETIDA}
-  \sloppy\nohyphens{AO CORPO DOCENTE DO INSTITUTO ALBERTO LUIZ COIMBRA
-  DE P{\' O}S-GRADUA{\c C}{\~ A}O E PESQUISA DE ENGENHARIA DA
-  UNIVERSIDADE FEDERAL DO RIO DE JANEIRO COMO PARTE DOS REQUISITOS
-  NECESS{\' A}RIOS PARA A OBTEN{\c C}{\~ A}O DO GRAU DE
-  {\MakeUppercase\local@degname} EM CI{\^E}NCIAS EM
-  {\MakeUppercase\local@deptname.\par}}%
+  \local@degname\ em \local@coursename.}
 }
 %
 \newcommand\frontpage@bottomtext{%
@@ -1446,18 +1406,9 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \end{center}%
 }
 %
-\newcommand\abstract@toptext{%
-  \noindent Resumo \ifthenelse{\boolean{maledoc}}{do}{da}
-  \local@doctype\ \ifthenelse{\boolean{maledoc}}{apresentado}{apresentada}
-  \sloppy\nohyphens{{\` a} COPPE/UFRJ como parte dos requisitos
-  necess{\' a}rios para a obten{\c c}{\~ a}o do grau de
-  \local@degname\ em Ci{\^ e}ncias (\@degree)}
-}
-\newcommand\foreignabstract@toptext{%
-  \noindent \sloppy\nohyphens{Abstract of \foreign@doctype\ presented to
-  COPPE/UFRJ as a partial fulfillment of the requirements for the
-  degree of \foreign@degname\ of Science (\@degree)}
-}
+\newcommand\abstract@toptext{\noindent\textbf{RESUMO}}
+\newcommand\foreignabstract@toptext{\noindent\textbf{ABSTRACT}}
+
 %
 %    \end{macrocode}
 %
@@ -1482,7 +1433,7 @@ postamble
 %
 % \section*{Acknowledgments}
 %
-% Thanks to all \CoppeTeX\ users who have reported their experience with this
+% Thanks to all \ufcaTeX\ users who have reported their experience with this
 % class.  We also thank to professor Fernando Lizarralde and Heiko Oberdiek for
 % their helpful comments. The authors would like to thank the National Council for
 % Scientific and Technological Development (CNPq) of Brazil.
