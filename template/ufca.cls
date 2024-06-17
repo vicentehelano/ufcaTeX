@@ -53,7 +53,6 @@
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{ufca}[\filedate\ \fileversion\ UFCA academic monographs.]
 \LoadClass[12pt,a4paper,oneside]{book}
-\RequirePackage[sort&compress]{natbib}
 \RequirePackage{hyphenat}
 \RequirePackage{lastpage}
 \RequirePackage{ifthen}

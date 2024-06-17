@@ -42,7 +42,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \end{document}
 %</driver> \fi
 %
-%% \CheckSum{1407}
+%% \CheckSum{1406}
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
@@ -355,26 +355,23 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %
 % \subsection*{References}
 %
-% It is well known that bibliography databases can be easily maintained with
-% the aid of \BibTeX. Thus, the \ufcaTeX\ project designed two \BibTeX\ styles,
-% |ufca-plain.bst| and |ufca-unsrt.bst|.
-% The |ufca-plain.bst| creates a list of references alphabetically sorted.
-% The later is a numbered style,
-% which sorts references by the order of citation.
-% To use them,
-% you have to select either |ufca-plain| or |ufca-unsrt| as the \BibTeX\ style and
-% include your \BibTeX\ references
-% without the |bib| extension, as in the following
-% example:
+% For easy of maintenance,  the \ufcaTeX\ project are now relying
+% on the abn\TeX\ styles for Bib\LaTeX.
+% To use them, first
+% you have to select either |abnt| or |abnt-numeric| as your Bib\LaTeX\ style
+% (here using the default driver) and add your \BibTeX\ resources
+% in the preamble:
 % \begin{verbatim}
-%   \bibliographystyle{ufca-unsrt}
-%   \bibliography{example}
+%   \usepackage[style=abnt]{biblatex}
+%   \addbibresource{example.bib}
+% \end{verbatim}
+% Then, at the desired position of your document, print your bibliography:
+% \begin{verbatim}
+%   \printbibliography
 % \end{verbatim}
 %
-% Run in sequence \LaTeX, \BibTeX, and twice again \LaTeX\ to resolve
-% reference.  These styles are |natbib| compatible.  This means that you can
-% freely issue the commands |\citet| and |\citep|, as well as any other
-% |natbib| feature.
+% Run in sequence \LaTeX, \verb|biber|, and twice again \LaTeX\ to resolve
+% references.
 %
 % \section{Class options}
 %
@@ -437,11 +434,13 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \label{UFCA:SAMPLE}
 %    \begin{macrocode}
 %<*example>
-\documentclass[msc,numbers]{ufca}
+\documentclass[msc]{ufca}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath,amssymb}
-\usepackage{mathptmx}
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage{hyperref}
+\usepackage[style=abnt]{biblatex}
+\addbibresource{example.bib}
 
 \makelosymbols
 \makeloabbreviations
@@ -519,26 +518,26 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \begin{table}[h]
   \caption{Exemplos de cita{\c c}\~oes utilizando o comando padr\~ao
     \texttt{\textbackslash cite} do \LaTeX\ e
-    o comando \texttt{\textbackslash citet},
-    fornecido pelo pacote \texttt{natbib}.}
+    o comando \texttt{\textbackslash textcite},
+    fornecido pelo pacote bib\LaTeX.}
   \label{tab:citation}
   \centering
   {\footnotesize
   \begin{tabular}{|c|c|c|}
     \hline
-    Tipo da Publica{\c c}\~ao & \verb|\cite| & \verb|\citet|\\
+    Tipo da Publica{\c c}\~ao & \verb|\cite| & \verb|\textcite|\\
     \hline
-    Livro & \cite{book-example} & \citet{book-example}\\
-    Artigo & \cite{article-example} & \citet{article-example}\\
-    Relat\'orio & \cite{techreport-example} & \citet{techreport-example}\\
-    Relat\'orio & \cite{techreport-exampleIn} & \citet{techreport-exampleIn}\\
+    Livro & \cite{book-example} & \textcite{book-example}\\
+    Artigo & \cite{article-example} & \textcite{article-example}\\
+    Relat\'orio & \cite{techreport-example} & \textcite{techreport-example}\\
+    Relat\'orio & \cite{techreport-exampleIn} & \textcite{techreport-exampleIn}\\
     Anais de Congresso & \cite{inproceedings-example} &
-      \citet{inproceedings-example}\\
-    S\'eries & \cite{incollection-example} & \citet{incollection-example}\\
-    Em Livro & \cite{inbook-example} & \citet{inbook-example}\\
+      \textcite{inproceedings-example}\\
+    S\'eries & \cite{incollection-example} & \textcite{incollection-example}\\
+    Em Livro & \cite{inbook-example} & \textcite{inbook-example}\\
     Disserta{\c c}\~ao de mestrado & \cite{mastersthesis-example} &
-      \citet{mastersthesis-example}\\
-    Tese de doutorado & \cite{phdthesis-example} & \citet{phdthesis-example}\\
+      \textcite{mastersthesis-example}\\
+    Tese de doutorado & \cite{phdthesis-example} & \textcite{phdthesis-example}\\
     \hline
   \end{tabular}}
   \end{table}
@@ -548,8 +547,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \chapter{Conclus\~oes}
 
   \backmatter
-  \bibliographystyle{ufca-unsrt}
-  \bibliography{example}
+  \printbibliography
 
   \appendix
   \chapter{Algumas Demonstra{\c c}\~oes}
@@ -571,7 +569,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{ufca}[\filedate\ \fileversion\ UFCA academic monographs.]
 \LoadClass[12pt,a4paper,oneside]{book}
-\RequirePackage[sort&compress]{natbib}
 \RequirePackage{hyphenat}
 \RequirePackage{lastpage}
 \RequirePackage{ifthen}
