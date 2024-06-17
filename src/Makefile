@@ -167,6 +167,6 @@ example.tex: $(PACKAGE_NAME).ins
 .PHONY: clean
 
 clean:
-	@$(_rm) -f *.log *.aux *.ist *.idx *.blg *.bbl *.glo *.bz2 \
+	@$(_rm) -f *.log *.aux *.ist *.idx *.blg *.bbl *.glo *.bz2 *.bcf *.xml \
 		         *.toc *.lof *.lot *.syx *.abx *.lab *.ilg *.los *.ind \
 						 *.gls *.out *~ ufca.pdf ufca.cls example.pdf example.tex
