@@ -1,0 +1,68 @@
+\documentclass[msc]{ufca}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[style=abnt]{biblatex}
+
+\addbibresource{Referencias.bib}
+
+\widowpenalty10000
+\clubpenalty10000
+
+\makelosymbols
+\makeloabbreviations
+
+\input{Configuracoes}
+
+\begin{document}
+  \title{Algum título}
+  \foreigntitle{Some title}
+  \author{Nome}{Sobrenome}
+  \advisor{Prof.}{Nome}{Sobrenome}{Dr.}{UFCA}
+
+  % Detalhes da banca
+  \examiner{Prof.}{Nome}{Sobrenome}{D.Sc.}{UFCA}
+  \examiner{Prof.}{Nome}{Sobrenome}{D.Sc}{UFCA}
+  \examiner{Prof.}{Nome}{Sobrenome}{D.Sc.}{IFCE}
+  \program{PROFMAT}
+  \date{30}{08}{2023}
+  \cataloging{S586b}{511.12}
+
+  \keyword{Palavra-chave 1}
+  \keyword{Palavra-chave 2}
+  \keyword{Palavra-chave 3}
+    
+  \foreignkeyword{Keyword 1}
+  \foreignkeyword{Keyword 2}
+  \foreignkeyword{Keyword 3}
+  
+  \maketitle
+
+  \frontmatter
+  \include{Dedicatoria}
+  \include{Agradecimentos}
+  \include{Resumo}
+  \include{Abstract}
+  \listoffigures
+  \listoftables
+  \printlosymbols
+  \printloabbreviations
+  \tableofcontents
+
+  \mainmatter
+  \include{Capitulo01}
+  \include{Capitulo02}
+  \include{Capitulo03}
+  \include{Capitulo04}
+  \include{Capitulo05}
+   
+  \backmatter
+  \printbibliography
+
+  \appendix
+  \include{ApendiceA}
+\end{document}
