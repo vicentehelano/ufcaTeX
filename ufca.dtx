@@ -492,11 +492,11 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 
   \end{foreignabstract} 
 
-  \tableofcontents
   \listoffigures
   \listoftables
   \printlosymbols
   \printloabbreviations
+  \tableofcontents
  
   \mainmatter
   \chapter{Introdu{\c c}\~ao}
@@ -665,6 +665,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \ifthenelse{\equal{#1}{PROFMAT}}
     {\global\def\local@progname{Matem{\' a}tica em Rede Nacional}
      \global\def\local@coursename{Matem{\' a}tica}
+     \global\def\local@coursearea{Matem{\' a}tica na Educa{\c c}{\~ a}o B{\' a}sica}
      \global\def\foreign@progname{Mathematics}
      \global\def\local@centername{Centro de Ci{\^ e}ncias e Tecnologia}
      \global\def\foreign@centername{Science and Technology Center}}{}
@@ -798,7 +799,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \setcounter{page}{2}
   \makefrontpage
   \clearpage
-  \pagestyle{plain}
+  \pagestyle{empty}
   \ifthenelse{\boolean{maledoc}}{}{\makecatalog}%
   \clearpage
   \makeapprovalpage
@@ -951,7 +952,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
         \ \ \ \protect\csname UfcaExaminerTitle:\the\count1\endcsname\space\csname UfcaExaminerDegree:\the\count1\endcsname\space\csname UfcaExaminerName:\the\count1\endcsname\space\csname UfcaExaminerSurname:\the\count1\endcsname\ \ \ }\\
         \vskip3\p@ \baselineskip12pt
     \eqmakebox[signture@list][c]{%
-	    \ \ \ \protect\csname UfcaExaminerAffiliation:\the\count1 \endcsname\ \ \ }\\
+    \ \ \ \protect\csname UfcaExaminerAffiliation:\the\count1 \endcsname\ \ \ }\\
         \advance\count1 by 1}
   \end{center}\par
   \vspace*{\fill}}
@@ -1067,10 +1068,10 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \newcommand\makecatalog{%
   \vspace*{\fill}
   \begin{center}
-	  {\small\textbf{Dados Internacionais de Catalogação na Publicação}}\par
-	  \vspace*{-0.4em}
-	  {\small\textbf{Sistema de Bibliotecas da Universidade Federal do Cariri}}\par
-	  \vspace*{0.4em}
+  {\small\textbf{Dados Internacionais de Catalogação na Publicação}}\par
+  \vspace*{-0.4em}
+  {\small\textbf{Sistema de Bibliotecas da Universidade Federal do Cariri}}\par
+  \vspace*{0.4em}
       \begin{tabularx}{\textwidth}{lX}
         \toprule
         \csname UfcaCatalogAuthorCode:0\endcsname & {\small \setlength{\parindent}{5mm}
@@ -1080,13 +1081,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
               & \multicolumn{1}{r}{CDD \csname UfcaCatalogCdd:0\endcsname}\\
         \bottomrule
       \end{tabularx}
-  \end{center}
-  \vspace*{\fill}}
-%    \end{macrocode}
-% \end{macro}
-%
-% \begin{macro}{\dedication}
-%    \begin{macrocode}
+  \end{center}\vspace*{2.5cm}}
 \newcommand\dedication[1]{
   \gdef\@dedic{#1}
     \cleardoublepage
@@ -1396,7 +1391,8 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   do \local@centername\
   da \local@universityname, como parte dos requisitos
   necess{\' a}rios {\` a} obten{\c c}{\~ a}o do t{\' i}tulo de
-  \local@degname\ em \local@coursename.}
+  \local@degname\ em \local@coursename.
+  \local@coursearea.}
 }
 %
 \newcommand\frontpage@bottomtext{%
