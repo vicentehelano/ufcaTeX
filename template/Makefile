@@ -102,4 +102,4 @@ version:
 clean:
 	@$(_rm) -f *.log *.aux *.idx *.blg *.bbl *.glo *.bz2 *.bcf *.xml \
 		*.toc *.lof *.lot *.syx *.abx *.lab *.ilg *.los *.ind \
-		*.gls *.out *~ *.pdf
+		*.gls *.out *~ Monografia.pdf Dissertacao.pdf Tese.pdf
