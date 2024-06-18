@@ -39,7 +39,6 @@ _tar=tar
 SHELL=/bin/bash
 
 CLSDIR=$(DESTDIR)/tex/latex/ufca
-BSTDIR=$(DESTDIR)/bibtex/bst/ufca
 ISTDIR=$(DESTDIR)/makeindex/ufca
 DOCDIR=$(DESTDIR)/doc/latex/ufca
 
@@ -89,11 +88,6 @@ install: doc class example.pdf
 	fi
 	mkdir -vp $(CLSDIR)
 	cp -vp $(PACKAGE_NAME).cls ufca-logo.eps ufca-logo.pdf $(CLSDIR)/
-	if [ -d "$(BSTDIR)" ]; then \
-	  rm -rf $(BSTDIR); \
-	fi
-	mkdir -vp $(BSTDIR)
-	cp -vp $(PACKAGE_NAME)-*.bst $(BSTDIR)/
 	if [ -d "$(ISTDIR)" ]; then \
 	  rm -rf $(ISTDIR); \
 	fi
