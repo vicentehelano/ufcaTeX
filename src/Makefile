@@ -31,7 +31,6 @@ COPYRIGHT_YEAR=2020
 PACKAGE_BUGREPORT="vicente.sobrinho@ufca.edu.br"
 
 TEX = pdflatex
-BIBTEX = biber
 MAKEIDX = makeindex
 _printf=printf
 _rm=rm
@@ -43,7 +42,6 @@ ISTDIR=$(DESTDIR)/makeindex/ufca
 DOCDIR=$(DESTDIR)/doc/latex/ufca
 
 TEXFLAGS  = 
-BIBTEXFLAGS =
 IDXFLAGS = -q -s gind.ist
 GLOFLAGS = -q -s gglo.ist
 LSTFLAGS = -q -s ufca.ist
@@ -59,9 +57,6 @@ all:
 
 doc: $(PACKAGE_NAME).dtx
 	@$(TEX) $(TEXFLAGS) $<
-	@if grep -s "There were undefined references" $(basename $<).log; then \
-	  $(BIBTEX) $(BIBTEXFLAGS) $(basename $<).aux; \
-	fi
 	@if grep -s '$(basename $<).idx' $(basename $<).log; then \
 	  $(MAKEIDX) $(IDXFLAGS) $(basename $<).idx -o $(basename $<).ind;\
 	fi
@@ -138,9 +133,6 @@ example.tex: $(PACKAGE_NAME).ins
 
 %.pdf: %.tex
 	@$(TEX) $(TEXFLAGS) $<
-	@if grep -s "There were undefined references" $(basename $<).log; then \
-	  $(BIBTEX) $(BIBTEXFLAGS) $(basename $<); \
-	fi
 	@if grep -s '$(basename $<).idx' $(basename $<).log; then \
 	  $(MAKEIDX) $(IDXFLAGS) $(basename $<).idx -o $(basename $<).ind;\
 	fi

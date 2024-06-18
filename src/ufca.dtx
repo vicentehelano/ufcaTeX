@@ -363,7 +363,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % in the preamble:
 % \begin{verbatim}
 %   \usepackage[style=abnt]{biblatex}
-%   \addbibresource{example.bib}
+%   \addbibresource{References.bib}
 % \end{verbatim}
 % Then, at the desired position of your document, print your bibliography:
 % \begin{verbatim}
@@ -431,6 +431,9 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %
 % \section{A simple example}
 %
+% In the following code, the bibliography is omitted only to save space.
+% For a full example, please refer to the accompanying template.
+%
 % \label{UFCA:SAMPLE}
 %    \begin{macrocode}
 %<*example>
@@ -439,8 +442,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{hyperref}
-\usepackage[style=abnt]{biblatex}
-\addbibresource{example.bib}
 
 \makelosymbols
 \makeloabbreviations
@@ -499,56 +500,11 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
  
   \mainmatter
   \chapter{Introdu{\c c}\~ao}
-
-  Segundo a norma de formata{\c c}\~ao de teses e disserta{\c c}\~oes da
-  Universidade Federal do Cariri (UFCA), toda abreviatura deve ser definida antes de
-  utilizada.\abbrev{UFCA}{Universidade Federal do Cariri}
-
-  Do mesmo modo, \'e imprescind\'ivel definir os s\'imbolos, tal como o
-  conjunto dos n\'umeros reais $\mathbb{R}$ e o conjunto vazio $\emptyset$.
-  \symbl{$\mathbb{R}$}{Conjunto dos n\'umeros reais}
-  \symbl{$\emptyset$}{Conjunto vazio}
-
-  \chapter{Revis\~ao Bibliogr\'afica}
-
-  Para ilustrar a completa ades\~ao ao estilo de cita{\c c}\~oes e listagem de
-  refer\^encias bibliogr\'aficas, a Tabela~\ref{tab:citation} apresenta cita{\c
-  c}\~oes de alguns dos trabalhos utilizando o estilo num\'erico.
-
-  \begin{table}[h]
-  \caption{Exemplos de cita{\c c}\~oes utilizando o comando padr\~ao
-    \texttt{\textbackslash cite} do \LaTeX\ e
-    o comando \texttt{\textbackslash textcite},
-    fornecido pelo pacote bib\LaTeX.}
-  \label{tab:citation}
-  \centering
-  {\footnotesize
-  \begin{tabular}{|c|c|c|}
-    \hline
-    Tipo da Publica{\c c}\~ao & \verb|\cite| & \verb|\textcite|\\
-    \hline
-    Livro & \cite{book-example} & \textcite{book-example}\\
-    Artigo & \cite{article-example} & \textcite{article-example}\\
-    Relat\'orio & \cite{techreport-example} & \textcite{techreport-example}\\
-    Relat\'orio & \cite{techreport-exampleIn} & \textcite{techreport-exampleIn}\\
-    Anais de Congresso & \cite{inproceedings-example} &
-      \textcite{inproceedings-example}\\
-    S\'eries & \cite{incollection-example} & \textcite{incollection-example}\\
-    Em Livro & \cite{inbook-example} & \textcite{inbook-example}\\
-    Disserta{\c c}\~ao de mestrado & \cite{mastersthesis-example} &
-      \textcite{mastersthesis-example}\\
-    Tese de doutorado & \cite{phdthesis-example} & \textcite{phdthesis-example}\\
-    \hline
-  \end{tabular}}
-  \end{table}
-
   \chapter{M\'etodo Proposto}
   \chapter{Resultados e Discuss\~oes}
   \chapter{Conclus\~oes}
 
   \backmatter
-  \printbibliography
-
   \appendix
   \chapter{Algumas Demonstra{\c c}\~oes}
 \end{document}
