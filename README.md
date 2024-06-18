@@ -104,4 +104,4 @@ section.
 
 ## Help & Support
 
-Please, send any comments, suggestions, questions and bugs to our [mailing list](http://ufcatex.sourceforge.net/mailing-list.html).
+Please, send any comments, suggestions and questions to our [Discussions](https://github.com/vicentehelano/ufcaTeX/discussions).
