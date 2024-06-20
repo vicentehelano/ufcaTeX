@@ -1,10 +1,17 @@
-% Pasta que contém as figuras
-\graphicspath{{Figuras/}} 
+\widowpenalty10000
+\clubpenalty10000
 
-\newtheorem{theorem}{{\textcolor{black}{Teorema}}}
-\newtheorem{corollary}{{\textcolor{black}{Corolário}}}
-\newtheorem{proposition}{{\textcolor{black}{Proposição}}}
-\newtheorem{lemma}{{\textcolor{black}{Lema}}}
-\newtheorem{example}{{\textcolor{black}{Exemplo}}}
-\newtheorem{definition}{{\textcolor{black}{Definição}}}
-\newtheorem{remark}{{\textcolor{black}{Observação}}}
+% Pasta que contém as figuras
+\graphicspath{{Figuras/}}
+
+\newtheorem{teorema}{Teorema}[chapter]
+\newtheorem{corolario}{Corolário}[chapter]
+\newtheorem{proposicao}{Proposição}[chapter]
+\newtheorem{lema}{Lema}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{definicao}{Definição}[chapter]
+
+\theoremstyle{remark}
+\newtheorem{observacao}{Observação}[chapter]
+\newtheorem{exemplo}{Exemplo}[chapter]

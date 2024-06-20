@@ -30,7 +30,7 @@
 %% Author(s): Vicente Helano,
 %%            George Ainsworth
 %% 
-%% \CheckSum{1407}
+%% \CheckSum{1418}
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
@@ -63,6 +63,7 @@
 \RequirePackage{eqparbox}
 \RequirePackage{multirow}
 \RequirePackage{ltxcmds}
+\RequirePackage{xpatch}
 \RequirePackage[a4paper,bindingoffset=0.0cm,vcentering=true,%
 top=2.5cm,bottom=2.5cm,left=3.0cm,right=3.0cm]{geometry}
 \def\ufcaTeX{{\rm C\kern-.05em{\sc o\kern-.025em p\kern-.025em
@@ -591,6 +592,11 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
       \immediate\write\@auxout{%
         \string\newlabel{cat:lofflag}{{}{:~il.;}{}}}}%
   }%
+  \xpatchcmd{\printbibliography}%
+    {{\blx@printbibliography}
+      {\blx@printbibliography[]}}%
+    {{\ufca@bibBegin\blx@printbibliography\ufca@bibEnd}
+      {\ufca@bibBegin\blx@printbibliography[]\ufca@bibEnd}}{}{}%
 }
 \newdimen\bibindent%
 \setlength\bibindent{1.5em}%

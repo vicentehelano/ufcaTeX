@@ -100,6 +100,7 @@ version:
 .PHONY: clean
 
 clean:
-	@$(_rm) -f *.log *.aux *.idx *.blg *.bbl *.glo *.bz2 *.bcf *.xml \
+	@$(_rm) -f *.log *.aux *.idx *.blg *.bbl *.glo *.bcf *.xml \
 		*.toc *.lof *.lot *.syx *.abx *.lab *.ilg *.los *.ind \
-		*.gls *.out *~ Monografia.pdf Dissertacao.pdf Tese.pdf
+		*.gls *.out *~ \
+		Monografia.{dvi,pdf} Dissertacao.{dvi,pdf} Tese.{dvi,pdf}
