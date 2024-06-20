@@ -302,14 +302,14 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \frontcover@maintext
   \end{minipage}
   \end{flushright}\par
-  \vspace*{15mm}
+  \vspace*{10mm}
   \noindent\local@approvedname: \number\day\ de\ \MakeLowercase\local@monthname\ de\ \number\year.\par
-  \vspace*{2cm}
+  \vspace*{10mm}
   \noindent\begin{center}
     \noindent{BANCA EXAMINADORA}\par
     \count1=0
     \@whilenum \count1<\@examiner \do {
-        \vskip26\p@ \baselineskip12pt
+        \vskip42\p@ \baselineskip12pt
     \eqmakebox[signture@list][c]{\hrulefill}\\
     \eqmakebox[signture@list][c]{%
         \ \ \ \protect\csname UfcaExaminerTitle:\the\count1\endcsname\space\csname UfcaExaminerDegree:\the\count1\endcsname\space\csname UfcaExaminerName:\the\count1\endcsname\space\csname UfcaExaminerSurname:\the\count1\endcsname\ \ \ }\\
