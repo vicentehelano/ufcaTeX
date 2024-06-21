@@ -30,7 +30,7 @@
 %% Author(s): Vicente Helano,
 %%            George Ainsworth
 %% 
-%% \CheckSum{1418}
+%% \CheckSum{1757}
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
@@ -137,16 +137,35 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \global\def\foreign@title{#1}%
 }
 \newcount\@advisor\@advisor0
-\newcommand\advisor[5]{%
-  \global\@namedef{UfcaAdvisorTitle:\expandafter\the\@advisor}{#1}
-  \global\@namedef{UfcaAdvisorName:\expandafter\the\@advisor}{#2}
-  \global\@namedef{UfcaAdvisorSurname:\expandafter\the\@advisor}{#3}
-  \global\@namedef{UfcaAdvisorDegree:\expandafter\the\@advisor}{#4}
-  \global\@namedef{UfcaAdvisorAffiliation:\expandafter\the\@advisor}{#5}
+  \newcommand\advisor[6]{%
+  \ifthenelse{\equal{#1}{F}}
+      {\global\def\local@advisorgender{a}}
+      {\global\def\local@advisorgender{}}
+  \global\@namedef{UfcaAdvisorTitle:\expandafter\the\@advisor}{#2}
+  \global\@namedef{UfcaAdvisorName:\expandafter\the\@advisor}{#3}
+  \global\@namedef{UfcaAdvisorSurname:\expandafter\the\@advisor}{#4}
+  \global\@namedef{UfcaAdvisorDegree:\expandafter\the\@advisor}{#5}
+  \global\@namedef{UfcaAdvisorAffiliation:\expandafter\the\@advisor}{#6}
   \global\advance\@advisor by 1
   \ifnum\@advisor>1
     \renewcommand\local@advisorstring{Orientadores}
     \renewcommand\foreign@advisorstring{Advisors}
+  \fi
+}
+\newcount\@coadvisor\@coadvisor0
+  \newcommand\coadvisor[6]{%
+  \ifthenelse{\equal{#1}{F}}
+      {\global\def\local@coadvisorgender{a}}
+      {\global\def\local@coadvisorgender{}}
+  \global\@namedef{UfcaCoAdvisorTitle:\expandafter\the\@coadvisor}{#2}
+  \global\@namedef{UfcaCoAdvisorName:\expandafter\the\@coadvisor}{#3}
+  \global\@namedef{UfcaCoAdvisorSurname:\expandafter\the\@coadvisor}{#4}
+  \global\@namedef{UfcaCoAdvisorDegree:\expandafter\the\@coadvisor}{#5}
+  \global\@namedef{UfcaCoAdvisorAffiliation:\expandafter\the\@coadvisor}{#6}
+  \global\advance\@coadvisor by 1
+  \ifnum\@coadvisor>1
+    \renewcommand\local@coadvisorstring{Coorientadores}
+    \renewcommand\foreign@coadvisorstring{Co-Advisors}
   \fi
 }
 \newcount\@examiner\@examiner0
@@ -260,25 +279,54 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \vspace*{7.5mm}
   \nohyphens{%
   \begin{tabularx}{8.45cm}[b]{@{}l@{ }>{\raggedright\arraybackslash}X@{}}
-    \local@advisorstring: &
+    \local@advisorstring\ifthenelse{\@advisor>1}{}{\local@advisorgender}: &
     \count1=0
     \toks@={}
     \@whilenum \count1<\@advisor \do{%
     \ifcase\count1 % same as \ifnum0=\count1
-      \toks@=\expandafter{\csname UfcaAdvisorName:\the\count1%
-        \expandafter\endcsname\expandafter\space%
+      \toks@=\expandafter{%
+        \csname UfcaAdvisorTitle:\the\count1\expandafter\endcsname\expandafter\space%
+        \csname UfcaAdvisorDegree:\the\count1\expandafter\endcsname\expandafter\space%
+        \csname UfcaAdvisorName:\the\count1\expandafter\endcsname\expandafter\space%
         \csname UfcaAdvisorSurname:\the\count1\endcsname\\}
     \else
       \toks@=\expandafter\expandafter\expandafter{%
         \expandafter\the\expandafter\toks@%
-        \expandafter&\expandafter\space%
-        \csname UfcaAdvisorName:\the\count1\expandafter\endcsname%
+        \expandafter&%
+        \expandafter\space\csname UfcaAdvisorTitle:\the\count1\expandafter\endcsname%
+        \expandafter\space\csname UfcaAdvisorDegree:\the\count1\expandafter\endcsname%
+        \expandafter\space\csname UfcaAdvisorName:\the\count1\expandafter\endcsname%
         \expandafter\space\csname UfcaAdvisorSurname:\the\count1\endcsname\\
       }%
     \fi
     \advance\count1 by 1}
     \the\toks@
   \end{tabularx}}\par
+  \ifthenelse{\@coadvisor>0}{\nohyphens{%
+  \begin{tabularx}{8.45cm}[b]{@{}l@{ }>{\raggedright\arraybackslash}X@{}}
+    \local@coadvisorstring\ifthenelse{\@coadvisor>1}{}{\local@coadvisorgender}: &
+    \count1=0
+    \toks@={}
+    \@whilenum \count1<\@coadvisor \do{%
+    \ifcase\count1 % same as \ifnum0=\count1
+      \toks@=\expandafter{%
+        \csname UfcaCoAdvisorTitle:\the\count1\expandafter\endcsname\expandafter\space%
+        \csname UfcaCoAdvisorDegree:\the\count1\expandafter\endcsname\expandafter\space%
+        \csname UfcaCoAdvisorName:\the\count1\expandafter\endcsname\expandafter\space%
+        \csname UfcaCoAdvisorSurname:\the\count1\endcsname\\}
+    \else
+      \toks@=\expandafter\expandafter\expandafter{%
+        \expandafter\the\expandafter\toks@%
+        \expandafter&%
+        \expandafter\space\csname UfcaCoAdvisorTitle:\the\count1\expandafter\endcsname%
+        \expandafter\space\csname UfcaCoAdvisorDegree:\the\count1\expandafter\endcsname%
+        \expandafter\space\csname UfcaCoAdvisorName:\the\count1\expandafter\endcsname%
+        \expandafter\space\csname UfcaCoAdvisorSurname:\the\count1\endcsname\\
+      }%
+    \fi
+    \advance\count1 by 1}
+    \the\toks@
+  \end{tabularx}}\par}{}
   \end{flushright}
   \vspace*{\fill}
   \begin{center}
@@ -376,25 +424,54 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
       % a name was split? Is this happening yet?
       \nohyphens{%
       \begin{tabularx}{100mm}[b]{@{}l@{ }>{\raggedright\arraybackslash}X@{}}
-        \local@advisorstring: &
+        \local@advisorstring\ifthenelse{\@advisor>1}{}{\local@advisorgender}: &
         \count1=0
         \toks@={}
         \@whilenum \count1<\@advisor \do{%
         \ifcase\count1 % same as \ifnum0=\count1
-          \toks@=\expandafter{\csname UfcaAdvisorName:\the\count1%
-          \expandafter\endcsname\expandafter\space%
-          \csname UfcaAdvisorSurname:\the\count1\endcsname\\}
+          \toks@=\expandafter{%
+            \csname UfcaAdvisorTitle:\the\count1\expandafter\endcsname\expandafter\space%
+            \csname UfcaAdvisorDegree:\the\count1\expandafter\endcsname\expandafter\space%
+            \csname UfcaAdvisorName:\the\count1\expandafter\endcsname\expandafter\space%
+            \csname UfcaAdvisorSurname:\the\count1\endcsname\\}
         \else
           \toks@=\expandafter\expandafter\expandafter{%
-            \expandafter\the\expandafter\toks@
-            \expandafter&\expandafter\space
-            \csname UfcaAdvisorName:\the\count1\expandafter\endcsname%
+            \expandafter\the\expandafter\toks@%
+            \expandafter&%
+            \expandafter\space\csname UfcaAdvisorTitle:\the\count1\expandafter\endcsname%
+            \expandafter\space\csname UfcaAdvisorDegree:\the\count1\expandafter\endcsname%
+            \expandafter\space\csname UfcaAdvisorName:\the\count1\expandafter\endcsname%
             \expandafter\space\csname UfcaAdvisorSurname:\the\count1\endcsname\\
           }%
         \fi
         \advance\count1 by 1}
         \the\toks@
       \end{tabularx}}\par
+      \ifthenelse{\@coadvisor>0}{\nohyphens{%
+      \begin{tabularx}{100mm}[b]{@{}l@{ }>{\raggedright\arraybackslash}X@{}}
+        \local@coadvisorstring\ifthenelse{\@coadvisor>1}{}{\local@coadvisorgender}: &
+        \count1=0
+        \toks@={}
+        \@whilenum \count1<\@coadvisor \do{%
+          \ifcase\count1 % same as \ifnum0=\count1
+            \toks@=\expandafter{%
+              \csname UfcaCoAdvisorTitle:\the\count1\expandafter\endcsname\expandafter\space%
+              \csname UfcaCoAdvisorDegree:\the\count1\expandafter\endcsname\expandafter\space%
+              \csname UfcaCoAdvisorName:\the\count1\expandafter\endcsname\expandafter\space%
+            \csname UfcaCoAdvisorSurname:\the\count1\endcsname\\}
+          \else
+            \toks@=\expandafter\expandafter\expandafter{%
+              \expandafter\the\expandafter\toks@%
+              \expandafter&%
+              \expandafter\space\csname UfcaCoAdvisorTitle:\the\count1\expandafter\endcsname%
+              \expandafter\space\csname UfcaCoAdvisorDegree:\the\count1\expandafter\endcsname%
+              \expandafter\space\csname UfcaCoAdvisorName:\the\count1\expandafter\endcsname%
+              \expandafter\space\csname UfcaCoAdvisorSurname:\the\count1\endcsname\\
+            }%
+          \fi
+          \advance\count1 by 1}
+          \the\toks@
+      \end{tabularx}}\par}{}
       \nohyphens{\local@doctype\ ({\@degreename}) --
       \local@universityname, \local@centername, Programa de Pós-graduação em \local@progname, \local@cityname, \number\year.}\par
       Inclui refer{\^ e}ncias bibliogr{\' a}ficas: p. \pageref{bib:begin} -- \pageref{bib:end}.\par
@@ -411,17 +488,22 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
       III. T{\' i}tulo.}
       \end{minipage}}
 
-\newcommand\cataloging[2]{%
+\newcommand\cataloging[5]{%
   \global\@namedef{UfcaCatalogAuthorCode:\expandafter\the\c@keywords}{#1}
   \global\@namedef{UfcaCatalogCdd:\expandafter\the\c@keywords}{#2}
+  \global\@namedef{UfcaCatalogCreatorGender:\expandafter\the\c@keywords}{#3}
+  \global\@namedef{UfcaCatalogCreator:\expandafter\the\c@keywords}{#4}
+  \global\@namedef{UfcaCatalogCreatorCode:\expandafter\the\c@keywords}{#5}
 }
 
 \newcommand\makecatalog{%
   \vspace*{\fill}
   \begin{center}
-  {\small\textbf{Dados Internacionais de Catalogação na Publicação}}\par
+  {\small Dados Internacionais de Catalogação na Publicação}\par
   \vspace*{-0.4em}
-  {\small\textbf{Sistema de Bibliotecas da Universidade Federal do Cariri}}\par
+  {\small Universidade Federal do Cariri}\par
+  \vspace*{-0.4em}
+  {\small Sistema de Bibliotecas}\par
   \vspace*{0.4em}
       \begin{tabularx}{\textwidth}{lX}
         \toprule
@@ -431,7 +513,13 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
               & {\small\makedata}\\
               & \multicolumn{1}{r}{CDD \csname UfcaCatalogCdd:0\endcsname}\\
         \bottomrule
-      \end{tabularx}
+      \end{tabularx}\par
+      \vspace*{0.4em}
+      {\noindent\local@librarianstring%
+  \ifthenelse{\equal{\csname UfcaCatalogCreatorGender:0\endcsname}{M}}{o}{a}: %
+    \csname UfcaCatalogCreator:0\endcsname}\par
+          \vspace*{-0.3125em}
+    {\csname UfcaCatalogCreatorCode:0\endcsname}
   \end{center}\vspace*{2.5cm}}
 \newcommand\dedication[1]{
   \gdef\@dedic{#1}
@@ -494,7 +582,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
       \@restonecolfalse
     \fi
     \chapter*{\listfigurename}%
-      \addcontentsline{toc}{chapter}{\listfigurename}%
       \@mkboth{\MakeUppercase\listfigurename}%
               {\MakeUppercase\listfigurename}%
     \@starttoc{lof}%
@@ -507,7 +594,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
       \@restonecolfalse
     \fi
     \chapter*{\listtablename}%
-      \addcontentsline{toc}{chapter}{\listtablename}%
       \@mkboth{%
           \MakeUppercase\listtablename}%
          {\MakeUppercase\listtablename}%
@@ -595,8 +681,8 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \xpatchcmd{\printbibliography}%
     {{\blx@printbibliography}
       {\blx@printbibliography[]}}%
-    {{\ufca@bibBegin\blx@printbibliography\ufca@bibEnd}
-      {\ufca@bibBegin\blx@printbibliography[]\ufca@bibEnd}}{}{}%
+    {{\ufca@bibBegin\addcontentsline{toc}{chapter}{Referências}\blx@printbibliography\ufca@bibEnd}
+      {\ufca@bibBegin\addcontentsline{toc}{chapter}{Referências}\blx@printbibliography[]\ufca@bibEnd}}{}{}%
 }
 \newdimen\bibindent%
 \setlength\bibindent{1.5em}%
@@ -632,7 +718,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \@mkboth{\MakeUppercase\glossaryname}%
   {\MakeUppercase\glossaryname}%
   \chapter*{\glossaryname}%
-  \addcontentsline{toc}{chapter}{\glossaryname}
   \list{}
   {\setlength{\listparindent}{0in}%
    \setlength{\labelwidth}{1.0in}%
@@ -669,6 +754,9 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \fi
 \newcommand\local@advisorstring{Orientador}
 \newcommand\foreign@advisorstring{Advisor}
+\newcommand\local@coadvisorstring{Coorientador}
+\newcommand\foreign@coadvisorstring{Co-Advisor}
+\newcommand\local@librarianstring{Bibliotecári}
 \ifthenelse{\boolean{maledoc}}{%
   \newcommand\local@approvedname{Aprovado em}%
 }{%
