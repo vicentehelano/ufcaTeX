@@ -25,12 +25,12 @@ Although it is tied to the UFCA guidelines, it can be easily ported to other ins
 The development of this class follows the Comprehensive TeX Archive
 Network (CTAN) standards. It is basically composed by an installation file ('ufca.ins') and the main source file ('ufca.dtx'). The full sources contain:
 
+  1. README.md: describe the UFCATeX package.
   1. LICENSE.md: full text of the GNU General Policy License version 3.
-  2. Makefile: used to extract the ufca class and build the
-     documentation and a sample thesis.
-  3. README.md: describe the UFCATeX package.
   5. ufca.dtx: main source file; contains the documentation, a sample
      thesis and a Makeindex style.
+  2. Makefile: used to extract the ufca class and build the
+     documentation and a sample thesis.
   7. ufca.ins: used to strip out the ufca document class from `ufca.dtx'.
   8. ufca-logo.[eps,pdf]: images included in the front cover.
   9. template (directory): a working template to start with.
@@ -41,7 +41,7 @@ If you have some experience with LaTeX classes and packages, you won't have any
 difficulty when installing UFCATeX. It should be installed as any other LaTeX
 package you have ever used. So, you can save your time skipping this section.
 
-The impatient user should get a thesis template [here](#).
+The impatient user should directly dive into the template directory.
 
 For the enthusiastic newbies, we give here succinct instructions for installing
 the UFCATeX bundle.
