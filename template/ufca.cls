@@ -29,7 +29,7 @@
 %% 
 %% Author(s): Vicente Helano
 %% 
-%% \CheckSum{1757}
+%% \CheckSum{1753}
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
@@ -62,6 +62,7 @@
 \RequirePackage{eqparbox}
 \RequirePackage{multirow}
 \RequirePackage{ltxcmds}
+\RequirePackage{etoolbox}
 \RequirePackage{xpatch}
 \RequirePackage[a4paper,bindingoffset=0.0cm,vcentering=true,%
 top=2.5cm,bottom=2.5cm,left=3.0cm,right=3.0cm]{geometry}
@@ -121,13 +122,14 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \renewcommand{\bibname}{References}
 }
 \newcommand\program[1]{%
-  \ifthenelse{\equal{#1}{PROFMAT}}
-    {\global\def\local@progname{Matem{\' a}tica em Rede Nacional}
-     \global\def\local@coursename{Matem{\' a}tica}
-     \global\def\local@coursearea{Matem{\' a}tica na Educa{\c c}{\~ a}o B{\' a}sica}
-     \global\def\foreign@progname{Mathematics}
-     \global\def\local@centername{Centro de Ci{\^ e}ncias e Tecnologia}
-     \global\def\foreign@centername{Science and Technology Center}}{}
+\ifthenelse{\equal{#1}{PMPGBqBM}}{\input{def/pmpgbqbm.def}}{}%
+\ifthenelse{\equal{#1}{PPGA}}{\input{def/ppga.def}}{}%
+\ifthenelse{\equal{#1}{PPGB}}{\input{def/ppgb.def}}{}%
+\ifthenelse{\equal{#1}{PPGCS}}{\input{def/ppgcs.def}}{}%
+\ifthenelse{\equal{#1}{PPGDRS}}{\input{def/ppgdrs.def}}{}%
+\ifthenelse{\equal{#1}{PROFFIL}}{\input{def/proffil.def}}{}%
+\ifthenelse{\equal{#1}{PROFMAT}}{\input{def/profmat.def}}{}%
+\ifthenelse{\equal{#1}{PROFSAUDE}}{\input{def/profsaude.def}}{}%
 }
 \renewcommand\title[1]{%
   \global\def\local@title{#1}%
@@ -237,7 +239,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \vspace*{1.5mm}
   \textbf{\MakeUppercase UNIVERSIDADE FEDERAL DO CARIRI}\par
   \textbf{\MakeUppercase\local@centername}\par
-  \textbf{PROGRAMA DE P{\' O}S-GRADUA{\c C}{\~ A}O EM \MakeUppercase\local@progname}
+  \textbf{\MakeUppercase\local@progname}
   \end{center}
   \vspace*{1.8cm}
   \begin{center}
@@ -472,7 +474,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
           \the\toks@
       \end{tabularx}}\par}{}
       \nohyphens{\local@doctype\ ({\@degreename}) --
-      \local@universityname, \local@centername, Programa de Pós-graduação em \local@progname, \local@cityname, \number\year.}\par
+      \local@universityname, \local@centername, \local@progname, \local@cityname, \number\year.}\par
       Inclui refer{\^ e}ncias bibliogr{\' a}ficas: p. \pageref{bib:begin} -- \pageref{bib:end}.\par
       \count1=0
       \count2=1
@@ -483,7 +485,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
       I. \csname UfcaAdvisorSurname:0\endcsname,%
       \ \csname UfcaAdvisorName:0\endcsname%
       \ifthenelse{\@advisor>1}{\ \emph{et~al.}{}}~(\ifthenelse{\@advisor>1}{Orientadores}{Orientador}).
-      II. \local@universityname, \local@centername, Programa de Pós-graduação em \local@progname.
+      II. \local@universityname, \local@centername, \local@progname.
       III. T{\' i}tulo.}
       \end{minipage}}
 
@@ -514,11 +516,9 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
         \bottomrule
       \end{tabularx}\par
       \vspace*{0.4em}
-      {\noindent\local@librarianstring%
+      {\noindent\small\local@librarianstring%
   \ifthenelse{\equal{\csname UfcaCatalogCreatorGender:0\endcsname}{M}}{o}{a}: %
-    \csname UfcaCatalogCreator:0\endcsname}\par
-          \vspace*{-0.3125em}
-    {\csname UfcaCatalogCreatorCode:0\endcsname}
+  \csname UfcaCatalogCreator:0\endcsname\space(\csname UfcaCatalogCreatorCode:0\endcsname)}\par
   \end{center}\vspace*{2.5cm}}
 \newcommand\dedication[1]{
   \gdef\@dedic{#1}
@@ -770,12 +770,12 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 \newcommand\frontcover@maintext{
   \sloppy\nohyphens{\local@doctype\ de \@degreename\
   \ifthenelse{\boolean{maledoc}}{apresentado}{apresentada}
-  ao Programa de P{\' o}s-gradua{\c c}{\~ a}o em \local@progname\
+  ao \local@progname\
   do \local@centername\
   da \local@universityname, como parte dos requisitos
   necess{\' a}rios {\` a} obten{\c c}{\~ a}o do t{\' i}tulo de
-  \local@degname\ em \local@coursename.
-  \local@coursearea.}
+  \local@degname\ em \local@coursename.}\par
+  \sloppy\nohyphens{Área de concentração: \local@coursearea.}
 }
 \newcommand\frontpage@bottomtext{%
   \begin{center}
