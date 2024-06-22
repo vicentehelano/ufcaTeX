@@ -21,7 +21,7 @@ institutions.
 > published by the Free Software Foundation.
 
 
-### Content
+## Content
 
 The development of this class follows the Comprehensive TeX Archive Network
 (CTAN) standards. It is basically composed by an installation file ('ufca.ins')
@@ -36,6 +36,17 @@ and the main source file ('ufca.dtx'). The full sources contain:
   7. ufca.ins: used to strip out the ufca document class from `ufca.dtx'.
   8. ufca-logo.[eps,pdf]: images included in the front cover.
   9. template (directory): a working template to start with.
+
+## Available courses
+
+At this moment, ufcaTeX supports only the PROFMAT course.
+We are currently working to extend it to all academic programs at UFCA.
+
+## A word on bibliography
+
+As of version 2.0, ufcaTeX no longer distributes BibTeX styles. We strongly
+recommend managing your references with BibLaTeX + biber, as the ABNT rules
+are already implemented therein.
 
 ## Installing
 
