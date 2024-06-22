@@ -39,8 +39,15 @@ and the main source file ('ufca.dtx'). The full sources contain:
 
 ## Available courses
 
-At this moment, ufcaTeX supports only the PROFMAT course.
-We are currently working to extend it to all academic programs at UFCA.
+At this moment, ufcaTeX supports the following graduate courses:
+* PMPGBqBM: Programa Multicêntrico de Pós-Graduação em Bioquímica e Biologia Molecular
+* PPGA: Programa de Pós-Graduação em Administração
+* PPGB: Programa de Pós-Graduação em Biblioteconomia
+* PPGCS: Programa de Pós-Graduação em Ciências da Saúde
+* PPDRS (Proder): Programa de Pós-Graduação em Desenvolvimento Regional Sustentável
+* PROFFILO: Programa de Pós-Graduação em Filosofia em Rede
+* PROFMAT: Programa de Pós-Graduação em Matemática em Rede Nacional
+* PROFSAUDE: Programa de Mestrado Profissional em Saúde da Família
 
 ## A word on bibliography
 
