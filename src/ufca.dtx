@@ -1,6 +1,6 @@
 % \iffalse meta-comment
 %
-% This is file `ufca.dtx'.
+% This is file `ufca.dtx', based upon `coppe.dtx'
 %
 % It uses the doc utility to generate documentations for the 'ufca'
 % document class and the 'ufca-unsrt' BibTeX style.
@@ -21,8 +21,7 @@
 % version 3 along with this package (see COPYING file).
 % If not, see <http://www.gnu.org/licenses/>.
 %
-% Author(s): Vicente Helano
-%            George O. Ainsworth Jr.
+% Author(s): Vicente Sobrinho
 %
 % \fi
 %
@@ -59,26 +58,10 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
 %%
-% \changes{v0.0}{2007/03/01}{Creation Date.}
-% \changes{v0.1}{2007/06/22}{Sourceforge submission.}
-% \changes{v0.1}{2007/08/13}{Documentation: bibliography fixed, title
-% translation.} \changes{v0.1}{2007/08/17}{Documentation: abstract translation;
-% Code: |babel| package deletion from the driver document.}
-% \changes{v0.1}{2007/09/25}{Documentation: introduction, installation;
-% License: update to the 3rd version of the GNU GPL; |ChangeLog| removed, and
-% added Change History.}
-% \changes{v0.2}{2008/03/06}{Unification of the code for the list of symbols
-% and abbreviations.}
-% \changes{v0.3}{2008/03/06}{Added `draft' option.}
-% \changes{v0.4}{2008/04/12}{Beta documentation.}
-% \changes{v1.0}{2008/06/10}{First \ufcaTeX\ release.}
-% \changes{v2.0}{2008/09/07}{\ufcaTeX\ release 2.0.}
-% \changes{v2.1}{2009/11/17}{\ufcaTeX\ release 2.1: Matching the new rules.}
-% \changes{v2.1.1}{2009/11/19}{Removed |inputenc| dependence, by removing all
-% non-ASCII characters, and changed all files to the UTF-8 encoding.}
-% \changes{v2.2}{2011/02/04}{Matching new guidelines, including new logo.}
-% \changes{v2.2.1}{2016/01/26}{Fixed problem with \texttt|eqparbox| at
-% signature page.}
+% \changes{v0.0.0}{2020/01/01}{First fork created (estimated date).}
+% \changes{v1.0.0}{2020/01/01}{Internal release (estimated date).}
+% \changes{v2.0.0}{2024/06/20}{Release 2.0.0: first working release.}
+% \changes{v2.1.0}{2024/06/21}{Release 2.1.0: a few fixes and abnt adjustments.}
 %
 % \DoNotIndex{\!,\',\.,\>,\^,\`,\',\~,\=,\\,\\\~,\\\^,\\ }
 % \DoNotIndex{\@arabic,\@auxout,\@biblabel,\@bsphack,\@clubpenalty,\@empty}
@@ -123,7 +106,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
 % \GetFileInfo{ufca}
 %
 % \title{The |ufca| document class}
-% \author{Vicente H. F. Batista}
+% \author{Vicente Sobrinho}
 %
 % \maketitle
 %
@@ -608,7 +591,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \renewcommand{\bibname}{References}
 }
 %    \end{macrocode}
-% \changes{v3.0}{2020/03/02}{Added support for monographs in English.}
 %
 % \begin{macro}{\program}
 % This macro is used to set the author's affiliation. There are twelve options
@@ -682,7 +664,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \fi
 }
 %    \end{macrocode}
-% \changes{v2.1}{2024/06/21}{Split advisors and co-advisors.}
+% \changes{v2.1.0}{2024/06/21}{Split advisors and co-advisors.}
 % \end{macro}
 %
 % \begin{macro}{\examiner}
@@ -697,7 +679,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \global\advance\@examiner by 1
 }
 %    \end{macrocode}
-% \changes{v3.0}{2020/02/03}{Examiners expansion without degree.}
 % \end{macro}
 %
 % \begin{macro}{\author}
@@ -801,8 +782,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \fi}
 %
 %    \end{macrocode}
-% \changes{v0.5}{2008/05/30}{Added mainmatter pages counter.}
-% \changes{v1.0}{2008/08/11}{Moved mainmatter counter to |AtEndDocument|.}
 % \end{macro}
 %
 % \begin{macro}{\maketitle}
@@ -839,9 +818,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \global\let\maketitle\relax%
   \global\let\and\relax}
 %    \end{macrocode}
-% \changes{v0.3}{2008/03/07}{Added number of examiners test.}
-% \changes{v0.3}{2008/03/07}{Generalization.}
-% \changes{v2.2}{2011/02/04}{Using |ltxcmds| to check if |hyperref| was loaded.}
 % \end{macro}
 %
 %    \begin{macrocode}
@@ -920,7 +896,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \number\year
   \end{center}}
 %    \end{macrocode}
-% \changes{v3.0}{2020/02/03}{New approval page layout.}
 %
 %    \begin{macrocode}
 \newcommand\makeapprovalpage{%
@@ -958,8 +933,7 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \end{center}\par
   \vspace*{\fill}}
 %    \end{macrocode}
-% \changes{v2.0}{2024/06/20}{Enlarged space for digital signatures.}
-% \changes{v3.0}{2020/02/03}{New approval page layout.}
+% \changes{v2.0.0}{2024/06/20}{Enlarged space for digital signatures.}
 %    \begin{macrocode}
 \newcommand\ufca@hypersetup{%
 \begingroup
@@ -1156,7 +1130,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
         \csname UfcaKeyword:\the\count1 \endcsname.
         \advance\count1 by 1}}\end{flushleft}\par\vspace*{\fill}}
 %    \end{macrocode}
-% \changes{v0.5}{2008/05/25}{Changed from macro to environment.}
 % \end{environment}
 %
 % \begin{environment}{foreignabstract}
@@ -1190,7 +1163,6 @@ T\kern-.1667em\lower.5ex\hbox{E}\kern-.125emX\spacefactor1000}
   \global\let\author\relax
   \global\let\date\relax}
 %    \end{macrocode}
-% \changes{v0.5}{2008/05/25}{Changed from macro to environment.}
 % \end{environment}
 %
 % \begin{macro}{\listoffigures}
