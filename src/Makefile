@@ -19,14 +19,14 @@
 # version 3 along with this package (see COPYING file).
 # If not, see <http://www.gnu.org/licenses/>.
 #
-# Author(s): Vicente Helano
+# Author(s): Vicente Sobrinho
 #
 
 PROGRAM_NAME=ufcaTeX Makefile
 PACKAGE_NAME=ufca
 DOC_SOURCE=ufca.dtx
 VERSION="1.0"
-AUTHORS=Vicente Helano
+AUTHORS=Vicente Sobrinho
 COPYRIGHT_YEAR=2020
 PACKAGE_BUGREPORT="vicente.sobrinho@ufca.edu.br"
 
