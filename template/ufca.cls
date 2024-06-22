@@ -12,7 +12,7 @@
 %% Graduate Courses in Engineering at the Federal University of
 %% Rio de Janeiro.
 %% 
-%% Copyright (C) 2008 Vicente Helano and George Ainsworth Jr.
+%% Copyright (C) 2020 Vicente Sobrinho
 %% 
 %% This program is free software; you can redistribute it and/or modify
 %% it under the terms of the GNU General Public License version 3 as
@@ -27,8 +27,7 @@
 %% version 3 along with this package (see COPYING file).
 %% If not, see <http://www.gnu.org/licenses/>.
 %% 
-%% Author(s): Vicente Helano,
-%%            George Ainsworth
+%% Author(s): Vicente Sobrinho
 %% 
 %% \CheckSum{1757}
 %% \CharacterTable

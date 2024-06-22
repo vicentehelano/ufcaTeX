@@ -9,7 +9,7 @@
 %% This is the makeindex style for creating ordered glossaries
 %% when using the `ufca' document class.
 %% 
-%% Copyright (C) 2008 Vicente Helano and George Ainsworth Jr.
+%% Copyright (C) 2020 Vicente Sobrinho
 %% 
 %% This program is free software; you can redistribute it and/or modify
 %% it under the terms of the GNU General Public License version 3 as
@@ -24,10 +24,9 @@
 %% version 3 along with this package (see COPYING file).
 %% If not, see <http://www.gnu.org/licenses/>.
 %% 
-%% Author(s): Vicente Helano,
-%%            George Ainsworth
+%% Author(s): Vicente Sobrinho
 %% 
-%% \CheckSum{1416}
+%% \CheckSum{1757}
 %% \CharacterTable
 %%  {Upper-case    \A\B\C\D\E\F\G\H\I\J\K\L\M\N\O\P\Q\R\S\T\U\V\W\X\Y\Z
 %%   Lower-case    \a\b\c\d\e\f\g\h\i\j\k\l\m\n\o\p\q\r\s\t\u\v\w\x\y\z
