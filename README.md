@@ -1,16 +1,17 @@
 # ufcaTeX
 
 This project provides a LaTeX document class suitable for writing academic
-dissertations and thesis according to the formatting rules established at Universidade
-Federal do Cariri (UFCA).
+dissertations and thesis according to the formatting rules established at
+Universidade Federal do Cariri (UFCA).
 
 The 'ufca' class contains a minimalist set of macro commands which allows its
-users to create the required textual elements following the UFCA
-guidelines. Among these elements, there are a front cover,
-a title page, cataloging details, native and foreign languages abstracts, table
-of contents, and list of bibliographic references.
+users to create the required textual elements following the UFCA guidelines.
+Among these elements, there are a front cover, a title page, cataloging
+details, native and foreign languages abstracts, table of contents, and list of
+bibliographic references.
 
-Although it is tied to the UFCA guidelines, it can be easily ported to other institutions.
+Although it is tied to the UFCA guidelines, it can be easily ported to other
+institutions.
 
 
 ## How Much
@@ -22,8 +23,9 @@ Although it is tied to the UFCA guidelines, it can be easily ported to other ins
 
 ### Content
 
-The development of this class follows the Comprehensive TeX Archive
-Network (CTAN) standards. It is basically composed by an installation file ('ufca.ins') and the main source file ('ufca.dtx'). The full sources contain:
+The development of this class follows the Comprehensive TeX Archive Network
+(CTAN) standards. It is basically composed by an installation file ('ufca.ins')
+and the main source file ('ufca.dtx'). The full sources contain:
 
   1. README.md: describe the UFCATeX package.
   1. LICENSE.md: full text of the GNU General Policy License version 3.
@@ -53,11 +55,11 @@ in the following sections.
 ### From releases
 
 Suppose TEXMF is a variable which stores the path of your local LaTeX tree.
-Then you should copy the files ufca.cls and ufca.ist to
-$TEXMF/tex/latex/ufca and $TEXMF/makeindex/ufca,
-respectively. The image files ufca-logo.eps and ufca-logo.pdf go into the same
-directory as ufca.cls. In the end, you have to type 'texhash' to update your
-LaTeX tree and to make UFCATeX visible to your LaTeX compiler.
+Then you should copy the files ufca.cls and ufca.ist to $TEXMF/tex/latex/ufca
+and $TEXMF/makeindex/ufca, respectively. The image files ufca-logo.eps and
+ufca-logo.pdf go into the same directory as ufca.cls. In the end, you have to
+type 'texhash' to update your LaTeX tree and to make UFCATeX visible to your
+LaTeX compiler.
 
 ### From sources
 
@@ -74,4 +76,5 @@ section.
 
 ## Help & Support
 
-Please, send any comments, suggestions and questions to our [Discussions](https://github.com/vicentehelano/ufcaTeX/discussions).
+Please, send any comments, suggestions and questions to our
+[Discussions](https://github.com/vicentehelano/ufcaTeX/discussions).

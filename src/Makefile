@@ -19,7 +19,7 @@
 # version 3 along with this package (see COPYING file).
 # If not, see <http://www.gnu.org/licenses/>.
 #
-# Author(s): Vicente Sobrinho
+# Author(s): Vicente Helano
 #
 
 PROGRAM_NAME=ufcaTeX Makefile
